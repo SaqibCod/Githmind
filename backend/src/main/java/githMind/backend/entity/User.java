@@ -27,7 +27,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID uuid;
+    private UUID id;
 
     @Column(name = "github_id", nullable = false)
     private Long githubId;
@@ -39,13 +39,13 @@ public class User {
     private String displayName;
 
     @Column(name = "avatar_url", length = 500)
-    private String avatarUrlString;
+    private String avatarUrl;
 
     @Column(name = "access_token", nullable = false, columnDefinition = "TEXT")
     private String accessToken;
 
     @Column(name = "token_scopes", length = 500)
-    private String tokenScope;
+    private String tokenScopes;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private Instant createdAt;

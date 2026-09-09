@@ -74,7 +74,7 @@ public class RepositoryService {
         }
 
     @Transactional(readOnly = true)
-    public List<RepositoryResponse> listSorted(UUID userId) {
+    public List<RepositoryResponse> listStored(UUID userId) {
         List<Repository> repos = repositoryRepository.findByUserIdOrderByFullNameAsc(userId);
         return repos.stream()
                 .map(this::toResponse)

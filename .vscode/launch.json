@@ -17,7 +17,7 @@
             "request": "launch",
             "mainClass": "githMind.backend.BackendApplication",
             "projectName": "backend",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/backend/.env"
         }
     ]
 }

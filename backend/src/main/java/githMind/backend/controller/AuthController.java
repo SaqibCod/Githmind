@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import lombok.RequiredArgsConstructor;
 
 import githMind.backend.dto.UserResponse;
 import githMind.backend.security.AppUserPrincipal;
@@ -14,9 +15,10 @@ import githMind.backend.entity.User;
 
 @RestController
 @RequestMapping("/api/auth")
+@RequiredArgsConstructor
 public class AuthController {
 
-    CurrentUser currentUser;
+    private final CurrentUser currentUser;
     
     @GetMapping("/login-url")
     public Map<String, String> loginUrl() {

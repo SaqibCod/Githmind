@@ -26,6 +26,7 @@ import lombok.Setter;
 public class User {
 
     @Id
+    @Column(name = "uuid")
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 

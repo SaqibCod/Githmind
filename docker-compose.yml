@@ -1,7 +1,7 @@
 services:
   postgres:
     image: pgvector/pgvector:pg16
-    container_name: devpilot-postgres
+    container_name: githmind-postgres
     environment:
       POSTGRES_DB: githMind
       POSTGRES_USER: postgres
@@ -9,7 +9,7 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - devpilot_pg_data:/var/lib/postgresql/data
+      - githmind_pg_data:/var/lib/postgresql/data
       - ./docker/postgres/init-extensions.sql:/docker-entrypoint-initdb.d/01-extensions.sql:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d githMind"]
@@ -18,4 +18,4 @@ services:
       retries: 5
 
 volumes:
-  devpilot_pg_data:
+  githmind_pg_data:

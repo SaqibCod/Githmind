@@ -1,4 +1,10 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    // The redhat.java extension bundles lombok-1.18.39, which has no JDK 25
+    // support: at source 25 it generates constructors missing the super() call,
+    // producing a VerifyError at startup. Disable the bundled agent and use the
+    // Maven-resolved 1.18.46 instead.
+    "java.jdt.ls.lombokSupport.enabled": false,
+    "java.jdt.ls.vmargs": "-javaagent:C:\\Users\\Windows\\.m2\\repository\\org\\projectlombok\\lombok\\1.18.46\\lombok-1.18.46.jar -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable"
 }

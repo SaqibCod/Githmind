@@ -15,6 +15,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
+import org.springframework.web.client.RestClient;
 import githMind.backend.security.GithubOauth2UserService;
 
 
@@ -25,8 +26,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final GithubOauth2UserService githubOauth2UserService;
-    
+    private final GithubOauth2UserService githubOauth2UserService; 
 
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http, AuthenticationSuccessHandler oauth2SuccessHandler,

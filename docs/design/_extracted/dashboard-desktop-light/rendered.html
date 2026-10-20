@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>githMind Dashboard</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#07070a}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #e08a2c;outline-offset:2px}
+[data-gm="dark"]{--bg:#07070a;--side:#0a0a0e;--glow1:rgba(245,166,91,.09);--text:#ededf0;--strong:#f3f3f6;--muted:#a8a8b4;--faint:#8c8c98;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.16);--card:#0b0b10;--pill:#0e0e13;--accent-t:#f5a65b;--cta-bg:#f3f3f6;--cta-fg:#0a0a0e;--nav-on:rgba(255,255,255,.08);--nav-on-t:#ffffff;--skel:#1a1a22;--skel2:#14141a;--track:#1a1a22;--link:#a89cff;--ok-t:#86efac;--ok-bg:rgba(74,222,128,.1);--ok-bd:rgba(74,222,128,.3);--vi-t:#b9aeff;--vi-bg:rgba(168,156,255,.12);--vi-bd:rgba(168,156,255,.3);--err-t:#fca5a5;--err-bg:rgba(248,113,113,.08);--err-bd:rgba(248,113,113,.4);--pe-t:#c4c4ce;--pe-bg:rgba(255,255,255,.06);--pe-bd:rgba(255,255,255,.16);--warn-t:#f7be8a;--warn-bg:rgba(245,166,91,.08);--warn-bd:rgba(245,166,91,.4);--logo:#ededf0;--tab-on-bg:#f3f3f6;--tab-on-fg:#0a0a0e}
+[data-gm="light"]{--bg:#f7f6fa;--side:#ffffff;--glow1:rgba(245,166,91,.16);--text:#16161c;--strong:#0d0d12;--muted:#52525e;--faint:#6a6a76;--line:rgba(10,10,20,.09);--line2:rgba(10,10,20,.2);--card:#ffffff;--pill:#ffffff;--accent-t:#a8560a;--cta-bg:#14141a;--cta-fg:#f7f7fa;--nav-on:rgba(10,10,20,.07);--nav-on-t:#0d0d12;--skel:#e6e6ee;--skel2:#eeeef4;--track:#e6e6ee;--link:#5546c8;--ok-t:#15803d;--ok-bg:rgba(22,163,74,.1);--ok-bd:rgba(22,163,74,.35);--vi-t:#5546c8;--vi-bg:rgba(85,70,200,.1);--vi-bd:rgba(85,70,200,.35);--err-t:#b91c1c;--err-bg:rgba(220,38,38,.07);--err-bd:rgba(220,38,38,.4);--pe-t:#52525e;--pe-bg:rgba(10,10,20,.05);--pe-bd:rgba(10,10,20,.2);--warn-t:#8f4707;--warn-bg:rgba(224,138,44,.12);--warn-bd:rgba(224,138,44,.55);--logo:#16161c;--tab-on-bg:#14141a;--tab-on-fg:#f7f7fa}
+@keyframes gm-spin{to{transform:rotate(360deg)}}
+@keyframes gm-pulse{0%,100%{opacity:.5}50%{opacity:1}}
+@keyframes gm-shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}
+@keyframes gm-rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.gm-row{animation:gm-rise .5s ease both}
+.gm-row:hover{background:var(--nav-on)}
+@media (max-width:640px){
+.gm-side{flex:1 1 100% !important;max-width:none !important;min-width:0 !important;flex-direction:row !important;flex-wrap:wrap !important;align-items:center !important;gap:12px !important;padding:14px 16px !important;border-right:0 !important;border-bottom:1px solid var(--line) !important}
+.gm-nav{flex-direction:row !important;order:3;width:100%}
+.gm-nav a{flex:1;justify-content:center}
+.gm-userbox{margin-top:0 !important;margin-left:auto !important;padding:0 !important;border:0 !important}
+.gm-usertext{display:none !important}
+.gm-main{padding:24px 16px 32px !important;gap:20px !important}
+.gm-h1{font-size:28px !important}
+.gm-tools{width:100%}
+.gm-tools label{flex:1 1 100%}
+.gm-tools button{flex:1 1 100%;justify-content:center}
+.gm-rowpad{padding:18px 16px !important}
+.gm-act{flex:1 1 100% !important}
+.gm-act a{width:100%;box-sizing:border-box}
+}
+@media (prefers-reduced-motion: reduce){*{animation:none !important}}
+</style>
+</helmet>
+<div data-gm="{{theme}}" style="min-height: 1000px; background: radial-gradient(800px 400px at 85% 0%, var(--glow1), transparent 70%), var(--bg); color: var(--text); font-family: 'Geist', system-ui, sans-serif; display: flex; flex-wrap: wrap; align-items: stretch">
+
+<div class="gm-side" style="flex: 1 1 232px; max-width: 260px; min-width: 200px; box-sizing: border-box; padding: 24px 16px; border-right: 1px solid var(--line); background: var(--side); display: flex; flex-direction: column; gap: 28px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 8px; font-weight: 600; font-size: 17px; color: var(--strong)">
+<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7" fill="none" stroke="#e08a2c" stroke-width="1.6"></polygon><polygon points="12,7 16.5,9.5 12,12 7.5,9.5" style="fill: var(--logo)"></polygon><polygon points="7.5,9.5 12,12 12,17 7.5,14.5" fill="#8b7cf6"></polygon><polygon points="16.5,9.5 12,12 12,17 16.5,14.5" fill="#f5a65b"></polygon></svg>
+githMind
+</a>
+<nav class="gm-nav" style="display: flex; flex-direction: column; gap: 4px; font-size: 14px">
+<a href="Dashboard.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 12px; border-radius: 12px; background: var(--nav-on); color: var(--nav-on-t); font-weight: 500">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg>
+Repositories</a>
+<a href="Settings.dc.html" style="display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 12px; border-radius: 12px; color: var(--muted)">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path></svg>
+Settings</a>
+</nav>
+<div class="gm-userbox" style="margin-top: auto; display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 14px; border: 1px solid var(--line)">
+<div style="width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #8b7cf6, #f5a65b); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #0a0a0e" aria-hidden="true">SQ</div>
+<div class="gm-usertext" style="display: flex; flex-direction: column; min-width: 0"><span style="font-size: 14px; font-weight: 500; color: var(--strong)">Saq</span><span style="font-size: 12px; color: var(--faint)">@saq</span></div>
+</div>
+</div>
+
+<main class="gm-main" style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 40px 48px; display: flex; flex-direction: column; gap: 28px">
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h1 class="gm-h1" style="margin: 0; font-size: 34px; letter-spacing: -0.03em; font-weight: 500; color: var(--strong)">Repositories</h1>
+<p style="margin: 0; font-size: 15px; color: var(--muted)">{{subtitle}}</p>
+</div>
+<div class="gm-tools" style="display: flex; flex-wrap: wrap; gap: 12px">
+<label style="display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--line2); background: var(--pill); font-size: 14px; color: var(--muted)">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+<input type="text" aria-label="Filter repositories" placeholder="Filter repositories" value="{{query}}" onInput="{{onQuery}}" style="background: transparent; border: 0; outline: 0; color: var(--text); font-size: 14px; font-family: inherit; width: 100%; min-width: 120px">
+</label>
+<button type="button" onClick="{{startSync}}" style="display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; border: 1px solid var(--line2); background: var(--pill); color: var(--text); font-size: 14px; font-weight: 500; font-family: inherit; cursor: pointer">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="{{syncIconStyle}}"><path d="M20 11a8 8 0 0 0-14.9-3M4 5v4h4M4 13a8 8 0 0 0 14.9 3M20 19v-4h-4"></path></svg>
+{{syncLabel}}</button>
+</div>
+</div>
+
+<sc-if value="{{showSyncing}}" hint-placeholder-val="{{ false }}">
+<div role="status" style="position: relative; overflow: hidden; display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--vi-bd); background: var(--vi-bg); font-size: 14px; color: var(--vi-t)">
+Syncing with GitHub. Your current list stays visible until it finishes.
+<span style="position: absolute; left: 0; bottom: 0; height: 2px; width: 40%; background: linear-gradient(90deg, transparent, #8b7cf6, #f5a65b, transparent); animation: gm-shimmer 1.6s ease-in-out infinite"></span>
+</div>
+</sc-if>
+
+<sc-if value="{{showError}}" hint-placeholder-val="{{ false }}">
+<div role="alert" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 18px; border-radius: 14px; border: 1px solid var(--err-bd); background: var(--err-bg); color: var(--err-t); font-size: 14px; line-height: 1.5">
+<span>Could not load your repositories. Check your connection and try again.</span>
+<button type="button" style="height: 38px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--err-bd); background: transparent; color: var(--err-t); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Retry</button>
+</div>
+</sc-if>
+
+<sc-if value="{{showList}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; background: var(--card); overflow: hidden; opacity: {{listOpacity}}">
+<sc-for list="{{repos}}" as="r" hint-placeholder-count="4">
+<div class="gm-row gm-rowpad" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding: 20px 24px; border-bottom: 1px solid var(--line)">
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<a href="Overview.dc.html" style="font-size: 16px; font-weight: 500; color: var(--strong)">{{r.fullName}}</a>
+<sc-if value="{{r.isPrivate}}" hint-placeholder-val="{{ false }}"><span style="display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line2); font-size: 11px; color: var(--muted)">Private</span></sc-if>
+</div>
+<div style="font-size: 14px; line-height: 1.5; color: var(--muted)">{{r.description}}</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; font-size: 12px; color: var(--faint); font-family: 'Geist Mono', monospace">
+<span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 8px; height: 8px; border-radius: 50%; background: {{r.langColor}}"></span>{{r.language}}</span>
+<span>{{r.defaultBranch}}</span>
+<a href="Dashboard.dc.html" style="color: var(--link)">GitHub ↗</a>
+</div>
+</div>
+<div style="flex: 0 1 190px; display: flex; flex-direction: column; gap: 8px; min-width: 120px">
+<span style="{{r.chipStyle}}">{{r.status}}</span>
+<sc-if value="{{r.isIndexing}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="height: 6px; border-radius: 99px; background: var(--track); overflow: hidden"><div style="{{r.barStyle}}"></div></div>
+<span style="font-size: 12px; color: var(--faint); font-family: 'Geist Mono', monospace">{{r.progressText}}</span>
+</div>
+</sc-if>
+<sc-if value="{{r.hasWarn}}" hint-placeholder-val="{{ false }}"><span style="font-size: 12px; color: var(--warn-t)">Indexed with warnings</span></sc-if>
+</div>
+<div class="gm-act" style="flex: 0 0 130px; display: flex; justify-content: flex-end">
+<a href="{{r.href}}" style="{{r.actionStyle}}">{{r.action}}</a>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{showSkeleton}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; background: var(--card); overflow: hidden" aria-busy="true" aria-label="Loading repositories">
+<sc-for list="{{skeletonRows}}" as="s" hint-placeholder-count="4">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding: 24px; border-bottom: 1px solid var(--line)">
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 12px"><div style="width: 60%; max-width: 220px; height: 14px; border-radius: 6px; background: var(--skel); animation: gm-pulse 1.6s ease-in-out infinite"></div><div style="width: 80%; height: 12px; border-radius: 6px; background: var(--skel2); animation: gm-pulse 1.6s ease-in-out infinite"></div></div>
+<div style="width: 84px; height: 24px; border-radius: 99px; background: var(--skel); animation: gm-pulse 1.6s ease-in-out infinite"></div>
+<div style="width: 96px; height: 40px; border-radius: 99px; background: var(--skel); animation: gm-pulse 1.6s ease-in-out infinite"></div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{showEmpty}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 72px 24px; border: 1px dashed var(--line2); border-radius: 18px; text-align: center">
+<svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7" fill="none" stroke="#8c8c98" stroke-width="1.2"></polygon><path d="M3 7l9 5 9-5M12 12v10" fill="none" stroke="#8c8c98" stroke-width="1.2"></path></svg>
+<h2 style="margin: 0; font-size: 22px; font-weight: 500; color: var(--strong)">No repositories yet</h2>
+<p style="margin: 0; max-width: 420px; font-size: 15px; line-height: 1.55; color: var(--muted)">Your GitHub account has no repositories. Create one on GitHub, then sync to see it here.</p>
+<button type="button" onClick="{{startSync}}" style="height: 46px; padding: 0 22px; border-radius: 999px; border: 0; background: var(--cta-bg); color: var(--cta-fg); font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer">Sync with GitHub</button>
+</div>
+</sc-if>
+
+<sc-if value="{{showNoMatch}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 56px 24px; border: 1px dashed var(--line2); border-radius: 18px; text-align: center">
+<h2 style="margin: 0; font-size: 20px; font-weight: 500; color: var(--strong)">No matches</h2>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">No repository matches that filter.</p>
+</div>
+</sc-if>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 12px; color: var(--faint)">
+<span style="font-family: 'Geist Mono', monospace">Preview state</span>
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="5">
+<button type="button" onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button>
+</sc-for>
+</div>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1280,"height":1000}}'>
+class Component extends DCLogic {
+state = { view: 'loaded', q: '' };
+renderVals() {
+const v = this.state.view;
+const q = this.state.q.trim().toLowerCase();
+const chip = (k) => 'display: inline-flex; align-self: flex-start; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-family: Geist Mono, monospace; color: var(--' + k + '-t); background: var(--' + k + '-bg); border: 1px solid var(--' + k + '-bd)';
+const btn = (primary) => 'display: inline-flex; align-items: center; justify-content: center; height: 42px; padding: 0 18px; border-radius: 999px; font-size: 14px; font-weight: 600; white-space: nowrap; ' + (primary ? 'background: var(--cta-bg); color: var(--cta-fg); border: 0' : 'background: transparent; color: var(--text); border: 1px solid var(--line2)');
+const data = [
+{ fullName: 'acme/payments-api', isPrivate: true, description: 'Billing and invoicing service with webhook handling.', language: 'Java', langColor: '#f5a65b', defaultBranch: 'main', st: 'READY', warn: false },
+{ fullName: 'acme/web-app', isPrivate: false, description: 'Customer dashboard built with Next.js.', language: 'TypeScript', langColor: '#8b7cf6', defaultBranch: 'main', st: 'INDEXING', done: 240, total: 480 },
+{ fullName: 'acme/ingest-worker', isPrivate: true, description: 'Queue consumer that normalizes incoming events.', language: 'Java', langColor: '#f5a65b', defaultBranch: 'main', st: 'READY', warn: true },
+{ fullName: 'saq/medi-scan', isPrivate: true, description: 'Lab report analyzer with retrieval over report text.', language: 'TypeScript', langColor: '#8b7cf6', defaultBranch: 'develop', st: 'FAILED' },
+{ fullName: 'saq/dotfiles', isPrivate: false, description: 'Shell and editor configuration.', language: 'Shell', langColor: '#4ade80', defaultBranch: 'main', st: 'PENDING' }
+];
+const map = {
+READY: { chip: chip('ok'), action: 'Open chat', href: 'Chat.dc.html', primary: true },
+INDEXING: { chip: chip('vi'), action: 'View progress', href: 'Overview.dc.html', primary: false },
+FAILED: { chip: chip('err'), action: 'Retry', href: 'Overview.dc.html', primary: false },
+PENDING: { chip: chip('pe'), action: 'Index', href: 'Overview.dc.html', primary: true }
+};
+const all = data.map((d) => {
+const m = map[d.st];
+const pct = d.total ? Math.round((d.done / d.total) * 100) : 0;
+return {
+fullName: d.fullName, isPrivate: d.isPrivate, description: d.description, language: d.language, langColor: d.langColor, defaultBranch: d.defaultBranch,
+status: d.st, chipStyle: m.chip, action: m.action, href: m.href, actionStyle: btn(m.primary),
+isIndexing: d.st === 'INDEXING', hasWarn: !!d.warn,
+barStyle: 'height: 100%; border-radius: 99px; background: linear-gradient(90deg, #8b7cf6, #f5a65b); width: ' + pct + '%',
+progressText: d.total ? d.done + ' of ' + d.total + ' files' : ''
+};
+});
+const repos = q ? all.filter((r) => r.fullName.toLowerCase().indexOf(q) !== -1) : all;
+const hasData = v === 'loaded' || v === 'syncing';
+const tabDefs = [['loaded', 'Loaded'], ['syncing', 'Syncing'], ['loading', 'First load'], ['empty', 'Zero repos'], ['error', 'Load error']];
+return {
+theme: this.props.theme === 'light' ? 'light' : 'dark',
+repos,
+showList: hasData && repos.length > 0,
+showNoMatch: hasData && repos.length === 0,
+showSyncing: v === 'syncing',
+showSkeleton: v === 'loading',
+showEmpty: v === 'empty',
+showError: v === 'error',
+skeletonRows: [1, 2, 3, 4].map((n) => ({ n })),
+listOpacity: v === 'syncing' ? '0.65' : '1',
+subtitle: hasData ? all.length + ' repositories. Index one to start chatting with it.' : 'Index a repository to start chatting with it.',
+syncLabel: v === 'syncing' ? 'Syncing...' : 'Sync with GitHub',
+syncIconStyle: v === 'syncing' ? 'animation: gm-spin 1s linear infinite' : '',
+query: this.state.q,
+onQuery: (e) => this.setState({ q: e.target.value }),
+startSync: () => this.setState({ view: 'syncing' }),
+tabs: tabDefs.map(([id, label]) => ({
+label,
+pick: () => this.setState({ view: id }),
+style: 'height: 32px; padding: 0 12px; border-radius: 999px; cursor: pointer; font-family: Geist Mono, monospace; font-size: 12px; color: ' + (v === id ? 'var(--tab-on-fg)' : 'var(--muted)') + '; background: ' + (v === id ? 'var(--tab-on-bg)' : 'transparent') + '; border: 1px solid var(--line2)'
+}))
+};
+}
+}
+</script>
+</body>
+</html>

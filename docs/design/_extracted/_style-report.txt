@@ -1,0 +1,51 @@
+
+### font-family  (0 distinct)
+
+### font-size  (7 distinct)
+   3p  28px !important   [dashboard,overview,settings]
+   2p  36px !important   [landing,login]
+   1p  16px !important   [landing]
+   1p  22px !important   [landing]
+   1p  26px !important   [callback]
+   1p  32px !important   [landing]
+   1p  42px !important   [landing]
+
+### font-weight  (0 distinct)
+
+### line-height  (1 distinct)
+   1p  1.05 !important   [landing]
+
+### letter-spacing  (0 distinct)
+
+### radius  (1 distinct)
+   1p  28px 28px 0 0 !important   [landing]
+
+### shadow  (2 distinct)
+   1p  0 0 0 rgba(245,166,91,0),inset 0 0 12px rgba(245,166,91,.15)   [landing]
+   1p  0 0 28px rgba(245,166,91,.38),inset 0 0 18px rgba(245,166,91,.3)   [landing]
+
+### gap  (4 distinct)
+   3p  12px !important   [dashboard,overview,settings]
+   3p  20px !important   [dashboard,overview,settings]
+   1p  22px !important   [chat]
+   1p  28px !important   [login]
+
+### max-width  (6 distinct)
+   3p  640px){
+.gm-side{flex:1 1 100% !important   [dashboard,overview,settings]
+   3p  none !important   [dashboard,overview,settings]
+   1p  640px){
+.gm-chatroot{flex-direction:column !important   [chat]
+   1p  640px){
+.gm-lpad{padding:24px 20px 32px !important   [login]
+   1p  640px){
+.gm-px{padding-left:20px !important   [landing]
+   1p  640px){.gm-cb{padding:32px 20px !important   [callback]
+
+### media  (2 distinct)
+   7p  (max-width:640px)   [landing,login,callback,dashboard,overview,chat,settings]
+   7p  (prefers-reduced-motion: reduce)   [landing,login,callback,dashboard,overview,chat,settings]
+
+### transition  (2 distinct)
+   2p  none !important   [landing,login]
+   1p  transform .35s ease,border-color .35s ease   [landing]

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>githMind Chat</title>
+<script src="ebda74f9-6a8b-4ad9-9a8f-e02110fc5a2c"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwRGFWfOw.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwYGFWfOw.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwTGFWfOw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwSGFWfOw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("6aa56661-4240-4adb-898d-decf3e668847") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwRGFWfOw.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwYGFWfOw.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwTGFWfOw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwSGFWfOw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("6aa56661-4240-4adb-898d-decf3e668847") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwRGFWfOw.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwYGFWfOw.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwTGFWfOw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwSGFWfOw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("6aa56661-4240-4adb-898d-decf3e668847") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrodmgPn.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrMdmgPn.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFg08vz7ehw.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrgdmgPn.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrkdmgPn.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("967427b2-c642-4103-9775-08dfa2264f82") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrodmgPn.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrMdmgPn.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFg08vz7ehw.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrgdmgPn.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrkdmgPn.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("967427b2-c642-4103-9775-08dfa2264f82") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+body{margin:0;background:#07070a}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #e08a2c;outline-offset:2px}
+[data-gm="dark"]{--bg:#07070a;--side:#0a0a0e;--glow1:rgba(245,166,91,.08);--text:#ededf0;--strong:#f3f3f6;--muted:#a8a8b4;--faint:#8c8c98;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.16);--card:#0b0b10;--pill:#0e0e13;--accent:#f5a65b;--accent-t:#f5a65b;--cta-bg:#f3f3f6;--cta-fg:#0a0a0e;--nav-on:rgba(255,255,255,.08);--nav-on-t:#ffffff;--track:#1a1a22;--link:#a89cff;--ok-t:#86efac;--ok-bg:rgba(74,222,128,.1);--ok-bd:rgba(74,222,128,.3);--vi-t:#b9aeff;--vi-bg:rgba(168,156,255,.12);--vi-bd:rgba(168,156,255,.3);--err-t:#fca5a5;--err-bg:rgba(248,113,113,.07);--err-bd:rgba(248,113,113,.4);--warn-t:#f7be8a;--warn-bg:rgba(245,166,91,.08);--warn-bd:rgba(245,166,91,.4);--chip-bg:rgba(245,166,91,.09);--chip-bd:rgba(245,166,91,.4);--chip-fg:#f7be8a;--bub:#1b1b24;--code-bg:#0f0f15;--logo:#ededf0;--tab-on-bg:#f3f3f6;--tab-on-fg:#0a0a0e}
+[data-gm="light"]{--bg:#f7f6fa;--side:#ffffff;--glow1:rgba(245,166,91,.14);--text:#16161c;--strong:#0d0d12;--muted:#52525e;--faint:#6a6a76;--line:rgba(10,10,20,.09);--line2:rgba(10,10,20,.2);--card:#ffffff;--pill:#ffffff;--accent:#e08a2c;--accent-t:#a8560a;--cta-bg:#14141a;--cta-fg:#f7f7fa;--nav-on:rgba(10,10,20,.07);--nav-on-t:#0d0d12;--track:#e6e6ee;--link:#5546c8;--ok-t:#15803d;--ok-bg:rgba(22,163,74,.1);--ok-bd:rgba(22,163,74,.35);--vi-t:#5546c8;--vi-bg:rgba(85,70,200,.1);--vi-bd:rgba(85,70,200,.35);--err-t:#b91c1c;--err-bg:rgba(220,38,38,.06);--err-bd:rgba(220,38,38,.4);--warn-t:#8f4707;--warn-bg:rgba(224,138,44,.12);--warn-bd:rgba(224,138,44,.55);--chip-bg:rgba(224,138,44,.12);--chip-bd:rgba(224,138,44,.55);--chip-fg:#8f4707;--bub:#eceaf3;--code-bg:#f1f0f6;--logo:#16161c;--tab-on-bg:#14141a;--tab-on-fg:#f7f7fa}
+@keyframes gm-spin{to{transform:rotate(360deg)}}
+@keyframes gm-blink{50%{opacity:0}}
+@keyframes gm-dots{0%,20%{opacity:.25}40%{opacity:1}100%{opacity:.25}}
+@keyframes gm-pulse{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes gm-rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.gm-in{animation:gm-rise .45s ease both}
+.gm-sessrow:hover{background:var(--nav-on)}
+.gm-scroll{scrollbar-width:thin}
+.gm-mobile-only{display:none !important}
+@media (max-width:640px){
+.gm-chatroot{flex-direction:column !important;height:844px !important}
+.gm-desk{display:none !important}
+.gm-mobile-only{display:flex !important}
+.gm-sess{flex:none !important;width:100% !important;max-height:340px !important;border-right:0 !important;border-bottom:1px solid var(--line) !important}
+.gm-sess[data-open="false"]{display:none !important}
+.gm-thread{padding:20px 16px !important;gap:22px !important}
+.gm-comp{padding:10px 12px 14px !important}
+.gm-empty{padding:32px 20px !important}
+}
+@media (prefers-reduced-motion: reduce){*{animation:none !important}}
+</style>
+</helmet>
+<div data-gm="{{theme}}" class="gm-chatroot" style="height: 900px; box-sizing: border-box; background: radial-gradient(800px 400px at 85% 0%, var(--glow1), transparent 70%), var(--bg); color: var(--text); font-family: 'Geist', system-ui, sans-serif; display: flex; overflow: hidden">
+
+<div class="gm-mobile-only" style="flex: none; align-items: center; gap: 12px; padding: 10px 12px; border-bottom: 1px solid var(--line); background: var(--side)">
+<a href="Overview.dc.html" aria-label="Back to repository overview" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: var(--muted)"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></a>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 500; color: var(--strong); white-space: nowrap; overflow: hidden; text-overflow: ellipsis">acme/payments-api</span><span style="font-size: 12px; color: var(--ok-t)">Ready</span></div>
+<button type="button" sc-camel-on-click="{{toggleDrawer}}" aria-expanded="{{drawerOpen}}" style="display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line2); background: var(--pill); color: var(--text); font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer">
+<svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.5A8 8 0 1 1 21 12Z"></path></svg>
+Chats</button>
+</div>
+
+<aside class="gm-sess" data-open="{{drawerOpen}}" style="flex: 0 0 300px; box-sizing: border-box; border-right: 1px solid var(--line); background: var(--side); display: flex; flex-direction: column; min-height: 0">
+<div class="gm-desk" style="padding: 22px 20px 14px; display: flex; flex-direction: column; gap: 18px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 17px; color: var(--strong)">
+<svg width="24" height="24" sc-camel-view-box="0 0 24 24" aria-hidden="true"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7" fill="none" stroke="#e08a2c" stroke-width="1.6"></polygon><polygon points="12,7 16.5,9.5 12,12 7.5,9.5" style="fill: var(--logo)"></polygon><polygon points="7.5,9.5 12,12 12,17 7.5,14.5" fill="#8b7cf6"></polygon><polygon points="16.5,9.5 12,12 12,17 16.5,14.5" fill="#f5a65b"></polygon></svg>
+githMind</a>
+<a href="Dashboard.dc.html" style="font-size: 13px; color: var(--muted)">← All repositories</a>
+</div>
+
+<div style="padding: 8px 16px 12px; display: flex; flex-direction: column; gap: 10px">
+<button type="button" sc-camel-on-click="{{toggleNew}}" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 44px; border-radius: 12px; border: 1px solid var(--line2); background: var(--pill); color: var(--text); font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer">
+<svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New chat</button>
+<sc-if value="{{newOpen}}" hint-placeholder-val="{{ false }}">
+<div class="gm-in" style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 14px; border: 1px solid var(--line2); background: var(--card)">
+<label for="gm-title" style="font-size: 12px; color: var(--faint)">Title (optional)</label>
+<input id="gm-title" type="text" maxlength="200" placeholder="Chat with acme/payments-api" style="height: 40px; box-sizing: border-box; padding: 0 12px; border-radius: 10px; border: 1px solid var(--line2); background: var(--pill); color: var(--text); font-family: inherit; font-size: 14px; outline: 0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-size: 12px; color: var(--faint); font-family: 'Geist Mono', monospace">0 / 200</span>
+<div style="display: flex; gap: 8px"><button type="button" sc-camel-on-click="{{toggleNew}}" style="height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line2); background: transparent; color: var(--muted); font-family: inherit; font-size: 13px; cursor: pointer">Cancel</button><button type="button" sc-camel-on-click="{{toggleNew}}" style="height: 34px; padding: 0 14px; border-radius: 999px; border: 0; background: var(--cta-bg); color: var(--cta-fg); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Start chat</button></div></div>
+</div>
+</sc-if>
+</div>
+
+<div class="gm-scroll" style="flex: 1; min-height: 0; overflow-y: auto; padding: 4px 12px 16px; display: flex; flex-direction: column; gap: 2px">
+<sc-if value="{{hasSessions}}" hint-placeholder-val="{{ true }}">
+<div style="padding: 8px 8px 6px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint)">Newest first</div>
+<sc-for list="{{sessions}}" as="c" hint-placeholder-count="3">
+<a href="Chat.dc.html" class="gm-sessrow" aria-current="{{c.current}}" style="{{c.style}}">
+<span style="font-size: 14px; font-weight: 500; color: var(--strong); white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{c.title}}</span>
+<span style="font-size: 12px; color: var(--faint)">{{c.when}}</span>
+</a>
+</sc-for>
+</sc-if>
+<sc-if value="{{noSessions}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 24px 12px; font-size: 14px; line-height: 1.55; color: var(--faint)">No chats yet for this repository.</div>
+</sc-if>
+</div>
+
+<div class="gm-desk" style="padding: 12px 16px 18px; border-top: 1px solid var(--line)">
+<div style="display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 14px">
+<div style="width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #8b7cf6, #f5a65b); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: #0a0a0e" aria-hidden="true">SQ</div>
+<div style="display: flex; flex-direction: column; min-width: 0"><span style="font-size: 14px; font-weight: 500; color: var(--strong)">Saq</span><span style="font-size: 12px; color: var(--faint)">@saq</span></div>
+</div>
+</div>
+</aside>
+
+<section style="flex: 1; min-width: 0; min-height: 0; display: flex; flex-direction: column">
+
+<header class="gm-desk" style="flex: none; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 32px; border-bottom: 1px solid var(--line)">
+<div style="display: flex; align-items: center; gap: 12px; min-width: 0"><span style="font-size: 16px; font-weight: 500; color: var(--strong)">acme/payments-api</span><span style="display: inline-flex; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-family: 'Geist Mono', monospace; color: var(--ok-t); background: var(--ok-bg); border: 1px solid var(--ok-bd)">READY</span></div>
+<a href="Overview.dc.html" style="font-size: 13px; color: var(--link)">Indexing overview →</a>
+</header>
+
+<sc-if value="{{showThread}}" hint-placeholder-val="{{ true }}">
+<div class="gm-scroll" style="flex: 1; min-height: 0; overflow-y: auto">
+<div class="gm-thread" style="max-width: 780px; margin: 0 auto; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 30px">
+
+<div style="align-self: flex-end; max-width: 80%; padding: 12px 16px; border-radius: 18px 18px 4px 18px; background: var(--bub); font-size: 15px; line-height: 1.55; color: var(--strong)">how does auth work?</div>
+
+<div style="display: flex; gap: 14px">
+<span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 9px; border: 1px solid var(--line2); display: flex; align-items: center; justify-content: center"><svg width="16" height="16" sc-camel-view-box="0 0 24 24"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7" fill="none" stroke="#e08a2c" stroke-width="1.8"></polygon></svg></span>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 15px; line-height: 1.7; color: var(--text)">Requests pass through a session filter. It reads the session cookie, loads the user, and rejects anything else with a <code style="font-family: 'Geist Mono', monospace; font-size: 13px; padding: 2px 6px; border-radius: 6px; background: var(--code-bg)">401</code>. Sign-in itself is handled by the GitHub OAuth success handler, which redirects back to the frontend once the session exists.</p>
+<pre style="margin: 0; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--code-bg); font-family: 'Geist Mono', monospace; font-size: 13px; line-height: 1.6; color: var(--text); overflow-x: auto">if (session == null) {
+  response.setStatus(401);
+  return;
+}</pre>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<a href="Chat.dc.html" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--chip-bd); background: var(--chip-bg); font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--chip-fg)"><svg width="13" height="13" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"></path><path d="M14 3v5h5"></path></svg>config/SecurityConfig.java:12-48</a>
+<a href="Chat.dc.html" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--chip-bd); background: var(--chip-bg); font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--chip-fg)"><svg width="13" height="13" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"></path><path d="M14 3v5h5"></path></svg>auth/SessionFilter.java</a>
+<a href="Chat.dc.html" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--chip-bd); background: var(--chip-bg); font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--chip-fg)"><svg width="13" height="13" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"></path><path d="M14 3v5h5"></path></svg>auth/OAuthSuccessHandler.java:30-71</a>
+</div>
+</div>
+</div>
+
+<div style="align-self: flex-end; max-width: 80%; padding: 12px 16px; border-radius: 18px 18px 4px 18px; background: var(--bub); font-size: 15px; line-height: 1.55; color: var(--strong)">where is the session cookie configured?</div>
+
+<sc-if value="{{showDone}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; gap: 14px">
+<span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 9px; border: 1px solid var(--line2); display: flex; align-items: center; justify-content: center"><svg width="16" height="16" sc-camel-view-box="0 0 24 24"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7" fill="none" stroke="#e08a2c" stroke-width="1.8"></polygon></svg></span>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 15px; line-height: 1.7; color: var(--text)">The cookie name, lifetime and SameSite setting live in the application properties, and the security configuration reads them when the filter chain is built.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<a href="Chat.dc.html" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--chip-bd); background: var(--chip-bg); font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--chip-fg)"><svg width="13" height="13" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"></path><path d="M14 3v5h5"></path></svg>resources/application.yml:18-26</a>
+<a href="Chat.dc.html" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--chip-bd); background: var(--chip-bg); font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--chip-fg)"><svg width="13" height="13" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"></path><path d="M14 3v5h5"></path></svg>config/SecurityConfig.java:52-60</a>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{showThinking}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; gap: 14px; align-items: center" role="status" aria-label="Thinking">
+<span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 9px; border: 1px solid var(--line2); display: flex; align-items: center; justify-content: center"><svg width="16" height="16" sc-camel-view-box="0 0 24 24"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7" fill="none" stroke="#e08a2c" stroke-width="1.8"></polygon></svg></span>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted)">Searching the repository<span style="display: inline-flex; gap: 4px" aria-hidden="true"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); animation: gm-dots 1.4s ease-in-out infinite"></span><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); animation: gm-dots 1.4s ease-in-out .2s infinite"></span><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent); animation: gm-dots 1.4s ease-in-out .4s infinite"></span></span></div>
+</div>
+</sc-if>
+
+<sc-if value="{{showStream}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; gap: 14px">
+<span aria-hidden="true" style="flex: none; width: 28px; height: 28px; border-radius: 9px; border: 1px solid var(--line2); display: flex; align-items: center; justify-content: center"><svg width="16" height="16" sc-camel-view-box="0 0 24 24"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7" fill="none" stroke="#e08a2c" stroke-width="1.8"></polygon></svg></span>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 15px; line-height: 1.7; color: var(--text)">The cookie name, lifetime and SameSite setting live in the application properties, and the security configuration reads them when the<span style="display: inline-block; width: 8px; height: 17px; margin-left: 3px; vertical-align: -3px; background: var(--accent); animation: gm-blink 1s steps(1) infinite"></span></p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; min-height: 32px" aria-hidden="true"><span style="width: 190px; height: 30px; border-radius: 8px; background: var(--track); animation: gm-pulse 1.4s ease-in-out infinite"></span><span style="width: 150px; height: 30px; border-radius: 8px; background: var(--track); animation: gm-pulse 1.4s ease-in-out .2s infinite"></span></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{showFailed}}" hint-placeholder-val="{{ false }}">
+<div role="alert" style="display: flex; flex-direction: column; gap: 12px; padding: 16px 18px; border-radius: 16px; border: 1px solid var(--err-bd); background: var(--err-bg)">
+<div style="display: flex; gap: 12px; align-items: flex-start; color: var(--err-t)">
+<svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M12 3 2 20h20L12 3Z"></path><path d="M12 10v4M12 17h.01"></path></svg>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 500">The response was interrupted before it finished.</span><span style="font-size: 13px; line-height: 1.55; opacity: 0.9">Retrying sends your question again as a new message, so it will appear twice in this chat.</span></div>
+</div>
+<div><button type="button" style="height: 38px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--err-bd); background: transparent; color: var(--err-t); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Retry</button></div>
+</div>
+</sc-if>
+
+</div>
+</div>
+
+<div class="gm-comp" style="flex: none; padding: 12px 32px 22px">
+<div style="max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: flex-end; gap: 10px; padding: 10px 10px 10px 18px; border-radius: 22px; border: 1px solid var(--line2); background: var(--card); opacity: {{compOpacity}}">
+<textarea rows="1" aria-label="Ask a question about this repository" placeholder="{{compPlaceholder}}" disabled="{{busy}}" style="flex: 1; min-width: 0; resize: none; border: 0; outline: 0; background: transparent; color: var(--text); font-family: inherit; font-size: 15px; line-height: 1.5; padding: 8px 0; height: 24px"></textarea>
+<sc-if value="{{busy}}" hint-placeholder-val="{{ false }}">
+<button type="button" aria-label="Stop generating" style="flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line2); background: transparent; color: var(--text); display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2.5"></rect></svg></button>
+</sc-if>
+<sc-if value="{{notBusy}}" hint-placeholder-val="{{ true }}">
+<button type="button" aria-label="Send message" style="flex: none; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--cta-bg); color: var(--cta-fg); display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+</sc-if>
+</div>
+<p style="margin: 0; text-align: center; font-size: 12px; color: var(--faint)">Answers come from the indexed code and can be wrong. Check the citations.</p>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{showEmpty}}" hint-placeholder-val="{{ false }}">
+<div class="gm-empty" style="flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 48px; text-align: center">
+<svg width="52" height="52" sc-camel-view-box="0 0 24 24" aria-hidden="true"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7" fill="none" stroke="#e08a2c" stroke-width="1.2"></polygon><path d="M3 7l9 5 9-5M12 12v10" fill="none" stroke="#8b7cf6" stroke-width="1.2"></path></svg>
+<h1 style="margin: 0; font-size: 30px; letter-spacing: -0.03em; font-weight: 500; color: var(--strong)">Start your first chat</h1>
+<p style="margin: 0; max-width: 440px; font-size: 15px; line-height: 1.6; color: var(--muted)">Ask anything about acme/payments-api. Every answer links back to the files it came from.</p>
+<button type="button" style="height: 48px; padding: 0 26px; border-radius: 999px; border: 0; background: var(--cta-bg); color: var(--cta-fg); font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">New chat</button>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 560px; padding-top: 8px">
+<span style="padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line2); font-size: 13px; color: var(--muted)">How is the project structured?</span>
+<span style="padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line2); font-size: 13px; color: var(--muted)">Where is authentication handled?</span>
+<span style="padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line2); font-size: 13px; color: var(--muted)">What does the indexing job do?</span>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{showBlocked}}" hint-placeholder-val="{{ false }}">
+<div class="gm-empty" style="flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 48px; text-align: center">
+<span style="width: 52px; height: 52px; border-radius: 16px; border: 1px solid var(--vi-bd); background: var(--vi-bg); display: flex; align-items: center; justify-content: center; color: var(--vi-t)"><svg width="24" height="24" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg></span>
+<h1 style="margin: 0; font-size: 28px; letter-spacing: -0.03em; font-weight: 500; color: var(--strong)">Chat unlocks after indexing</h1>
+<p style="margin: 0; max-width: 440px; font-size: 15px; line-height: 1.6; color: var(--muted)">This repository has not finished indexing, so there is nothing to search yet.</p>
+<a href="Overview.dc.html" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 48px; padding: 0 26px; border-radius: 999px; background: var(--cta-bg); color: var(--cta-fg); font-size: 15px; font-weight: 600">Go to indexing <span aria-hidden="true">→</span></a>
+</div>
+</sc-if>
+
+</section>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 14px 20px; background: var(--bg); color: var(--faint); font-size: 12px">
+<span style="font-family: 'Geist Mono', monospace">Preview state</span>
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="8">
+<button type="button" sc-camel-on-click="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button>
+</sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;dark&quot;,&quot;light&quot;],&quot;default&quot;:&quot;dark&quot;},&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:980}}">
+class Component extends DCLogic {
+state = { s: 'done', newOpen: false, drawer: false };
+renderVals() {
+const { s, newOpen, drawer } = this.state;
+const thread = s === 'done' || s === 'thinking' || s === 'streaming' || s === 'failed';
+const busy = s === 'thinking' || s === 'streaming';
+const sessRow = (current) => 'display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 12px; text-decoration: none; background: ' + (current ? 'var(--nav-on)' : 'transparent');
+const sessions = [
+{ title: 'Auth flow', when: 'Today', current: true },
+{ title: 'Billing webhooks', when: 'Yesterday', current: false },
+{ title: 'Chat with acme/payments-api', when: 'Last week', current: false }
+].map((c) => ({ title: c.title, when: c.when, current: c.current ? 'page' : 'false', style: sessRow(c.current) }));
+const key = drawer ? 'drawer' : (newOpen ? 'newform' : s);
+const tabDefs = [['done', 'Conversation'], ['thinking', 'Thinking'], ['streaming', 'Streaming'], ['failed', 'Stream failed'], ['empty', 'No chats'], ['blocked', 'Repo not ready'], ['newform', 'New chat form'], ['drawer', 'Chats drawer (mobile)']];
+return {
+theme: this.props.theme === 'light' ? 'light' : 'dark',
+showThread: thread, showEmpty: s === 'empty', showBlocked: s === 'blocked',
+hasSessions: thread, noSessions: !thread,
+sessions,
+showDone: s === 'done', showThinking: s === 'thinking', showStream: s === 'streaming', showFailed: s === 'failed',
+busy, notBusy: !busy,
+compOpacity: busy ? '0.7' : '1',
+compPlaceholder: busy ? 'Waiting for the answer...' : 'Ask about this repository',
+drawerOpen: drawer ? 'true' : 'false',
+newOpen,
+toggleNew: () => this.setState({ newOpen: !this.state.newOpen }),
+toggleDrawer: () => this.setState({ drawer: !this.state.drawer }),
+tabs: tabDefs.map(([id, lab]) => ({
+label: lab,
+pick: () => this.setState(id === 'newform' ? { s: 'done', newOpen: true, drawer: false } : (id === 'drawer' ? { s: 'done', newOpen: false, drawer: true } : { s: id, newOpen: false, drawer: false })),
+style: 'height: 32px; padding: 0 12px; border-radius: 999px; cursor: pointer; font-family: Geist Mono, monospace; font-size: 12px; color: ' + (key === id ? 'var(--tab-on-fg)' : 'var(--muted)') + '; background: ' + (key === id ? 'var(--tab-on-bg)' : 'transparent') + '; border: 1px solid var(--line2)'
+}))
+};
+}
+}
+</script>
+
+
+</body></html>

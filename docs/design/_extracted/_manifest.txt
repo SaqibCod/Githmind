@@ -1,0 +1,210 @@
+githmind-landing/58073fbd-3483-4f3c-b98c-d3f397f6d4e2  text/javascript 45305b
+githmind-landing/73599ab9-aad2-4d55-adb7-1e9d9fdc061d  text/javascript 10751b
+githmind-landing/85fd350a-005f-4d8b-82d4-2a805d767e4c  text/javascript 131835b
+githmind-landing/[skipped asset] e1b38382-bc2c-45ac-8b93-50d3f8b513bc font/woff2 29400b
+githmind-landing/[skipped asset] 61f01620-5518-4469-87b2-fd3d76c350a3 font/woff2 23128b
+githmind-landing/_template.html
+landing-desktop-light/eba73155-1a99-4b7b-8d2c-d72950fdcceb  text/javascript 45305b
+landing-desktop-light/ef30b44a-3c54-4b38-8538-ee5bf7f8bbde  text/html 30688b
+landing-desktop-light/f50745d5-eae4-4bbc-a2b2-80ebbb6196d9  text/css 188844b
+landing-desktop-light/60b2d3b2-a942-4ad2-8c27-632f5bcca7bb  text/javascript 10751b
+landing-desktop-light/21a692f1-4a32-4dbc-b7ab-e66b46c1a7bf  text/javascript 131835b
+landing-desktop-light/[skipped asset] 75e2f9e3-5b84-4a2d-b278-345518ae65f6 font/woff2 29400b
+landing-desktop-light/[skipped asset] 397d3a32-a786-4b78-a3fa-c4a00e750cff font/woff2 23128b
+landing-desktop-light/_template.html
+landing-mobile-dark/7842dffc-b443-428c-9d1c-fc7e7205a5ec  text/javascript 45305b
+landing-mobile-dark/69333ed6-c8c7-4cae-a691-f46e10f365e4  text/html 30688b
+landing-mobile-dark/2ca7f057-3f99-4ff3-a3f1-bcd93a85ad8f  text/css 188844b
+landing-mobile-dark/3ced2758-b182-47e0-adfc-19f24d731808  text/javascript 10751b
+landing-mobile-dark/c53f90ae-a201-408e-b2f7-387c45ec9373  text/javascript 131835b
+landing-mobile-dark/[skipped asset] 9cf51557-77b9-44e6-b7c7-91b568b35502 font/woff2 29400b
+landing-mobile-dark/[skipped asset] 1430c5fa-51c4-4c77-a1ff-a9bf64394c6a font/woff2 23128b
+landing-mobile-dark/_template.html
+landing-mobile-light/c0a566f5-8d92-4a08-a9c2-2b80833f7c3f  text/javascript 45305b
+landing-mobile-light/6f77a7fe-d59a-41fb-88fb-88a0343228e8  text/html 30688b
+landing-mobile-light/a3210ab5-7b07-4750-aeaa-fcc9fc904ddc  text/css 188844b
+landing-mobile-light/71e89f66-3c1f-4d66-bb2b-3b3b9edb6a02  text/javascript 10751b
+landing-mobile-light/4a74eabe-f3a9-4ef3-bd9c-fd98cc305ca6  text/javascript 131835b
+landing-mobile-light/[skipped asset] a10e887f-7a63-4d0d-a230-21692a23b047 font/woff2 29400b
+landing-mobile-light/[skipped asset] d43e94d0-5a61-408b-a55e-ceea9da8c89d font/woff2 23128b
+landing-mobile-light/_template.html
+githmind-sign-in/5fe4a99c-4926-4131-84c2-3598d90aba4b  text/javascript 45305b
+githmind-sign-in/5a23a404-7f97-4ce5-ace6-1630e8f329e0  text/javascript 10751b
+githmind-sign-in/abf64586-1f50-4ad2-b8fc-928e4cc4a74d  text/javascript 131835b
+githmind-sign-in/[skipped asset] 94ebd0fa-424b-4db7-9eea-89fcbcc08623 font/woff2 29400b
+githmind-sign-in/[skipped asset] 0cc7d2e1-98eb-443a-b577-ddbb8708f1f2 font/woff2 23128b
+githmind-sign-in/_template.html
+login-desktop-light/96c7ddea-5e6d-42e6-80f6-37399681122e  text/javascript 45305b
+login-desktop-light/d625eaef-1ab2-4367-a5d6-37366249cd51  text/html 13459b
+login-desktop-light/648393cd-f16e-42fb-8d82-7cb874a1ba0c  text/css 188844b
+login-desktop-light/c0e53170-844b-4547-b9c4-f7e8d6405529  text/javascript 10751b
+login-desktop-light/0f78fa3e-5596-4a49-a68f-6d35a7ef19f5  text/javascript 131835b
+login-desktop-light/[skipped asset] d2a7ab28-473b-4aa2-b3d5-50ede8cd1c48 font/woff2 29400b
+login-desktop-light/[skipped asset] ef24f683-fbe1-4bcf-972c-8fc9c287e947 font/woff2 23128b
+login-desktop-light/_template.html
+login-mobile-dark/e842d17e-baab-488b-96cd-3a2bb2018d46  text/javascript 45305b
+login-mobile-dark/036ea2e4-4c61-4aee-8af5-16519fe73565  text/html 13459b
+login-mobile-dark/f5c17a94-0b4d-4101-820d-8637490835e0  text/css 188844b
+login-mobile-dark/6c21a313-8912-4f1a-b3ea-8725d5023df1  text/javascript 10751b
+login-mobile-dark/6bfc6ab9-926d-4ea0-bdeb-c3adbe0749af  text/javascript 131835b
+login-mobile-dark/[skipped asset] 28999095-c91b-4eda-9f77-99080a3e2b93 font/woff2 29400b
+login-mobile-dark/[skipped asset] 51b07e34-df68-4aea-823f-50e3ec8ab19b font/woff2 23128b
+login-mobile-dark/_template.html
+login-mobile-light/e9adf26c-cb54-4261-9087-e30de417095c  text/javascript 45305b
+login-mobile-light/2211ac47-1b84-49c1-8c7d-4b2b2ce993d0  text/html 13459b
+login-mobile-light/007db806-1d21-4dc4-8998-99e3eb972ab0  text/css 188844b
+login-mobile-light/96d79b54-1205-42f5-af97-3cf27695c31e  text/javascript 10751b
+login-mobile-light/7721f536-5f68-4508-b80f-c405272492dd  text/javascript 131835b
+login-mobile-light/[skipped asset] 1b8c17d6-f212-42a8-9c10-77a6d7a82ef5 font/woff2 29400b
+login-mobile-light/[skipped asset] 0b6c13e4-3184-4ef0-8f89-486db67ed5f1 font/woff2 23128b
+login-mobile-light/_template.html
+githmind-callback/d5932fd9-8afd-4db2-b911-ebdfd892af0c  text/javascript 45305b
+githmind-callback/d17f9a80-c5a0-41a7-9330-71564f6627d5  text/javascript 10751b
+githmind-callback/480213f9-0759-4b2c-b010-360dca4c7459  text/javascript 131835b
+githmind-callback/[skipped asset] a1f453a1-61df-4483-be6b-41a3e2fcb7cb font/woff2 29400b
+githmind-callback/[skipped asset] c944f573-567c-4ec1-9f09-ccf50dc97b9b font/woff2 23128b
+githmind-callback/_template.html
+callback-desktop-light/92883927-283a-47e5-9ad3-6388f5c5d278  text/javascript 45305b
+callback-desktop-light/6482f67b-69db-4dd1-9acd-09cc42f522c7  text/html 6641b
+callback-desktop-light/f1ef0374-23de-46bf-a42d-2c5f9a521370  text/css 188844b
+callback-desktop-light/21800702-255b-4440-801e-cc235de147b2  text/javascript 10751b
+callback-desktop-light/4538502d-362d-46fa-98d1-7c00bba5109a  text/javascript 131835b
+callback-desktop-light/[skipped asset] f5490fcb-8f3b-4f82-a6eb-8d03739eb351 font/woff2 29400b
+callback-desktop-light/[skipped asset] d3ffe166-9539-4670-b058-47b9a6886853 font/woff2 23128b
+callback-desktop-light/_template.html
+callback-mobile-dark/89a22648-cf03-44bf-b9d1-47fd5c732551  text/javascript 45305b
+callback-mobile-dark/3b2c60af-f7c7-4d7e-9985-4621992b26e6  text/html 6641b
+callback-mobile-dark/8d13a21f-d8a9-4d88-b883-a67f9c5251dd  text/css 188844b
+callback-mobile-dark/19ba829e-8339-4ed2-a519-29e85167f8f7  text/javascript 10751b
+callback-mobile-dark/b00d84c6-fdb0-437e-a480-002e3dfee087  text/javascript 131835b
+callback-mobile-dark/[skipped asset] c20eacdf-f03f-440a-b3ce-cfe66b4243e7 font/woff2 29400b
+callback-mobile-dark/[skipped asset] feda110a-d7f1-4535-b52a-1d5b1409fe60 font/woff2 23128b
+callback-mobile-dark/_template.html
+callback-mobile-light/fc421be9-770e-4428-aca3-020a3dcfe8d3  text/javascript 45305b
+callback-mobile-light/0d0b3c6e-b6e4-4f5d-83fc-8215566ed0ac  text/html 6641b
+callback-mobile-light/80864f9d-b729-4eb1-8523-472c0ef7d670  text/css 188844b
+callback-mobile-light/3c4144d2-d85b-40f8-b62b-3ea866d6ddd0  text/javascript 10751b
+callback-mobile-light/1f482b4e-da17-48d4-ab16-397d4819873c  text/javascript 131835b
+callback-mobile-light/[skipped asset] e72b8a41-53bb-4f77-ab72-f204e04bb2f0 font/woff2 29400b
+callback-mobile-light/[skipped asset] 0cc3dcbd-d403-4c17-9120-8a6462d15a82 font/woff2 23128b
+callback-mobile-light/_template.html
+githmind-dashboard/2a4149ee-bedc-437e-9caa-3906db999308  text/javascript 45305b
+githmind-dashboard/85ba15db-62a5-4f43-a536-dd25f451a517  text/javascript 10751b
+githmind-dashboard/ff116f22-7c78-4b9e-9638-fc251a389c66  text/javascript 131835b
+githmind-dashboard/[skipped asset] 1f1cee63-686e-41d7-bea6-ad76b2d70f16 font/woff2 29400b
+githmind-dashboard/[skipped asset] 9a24b825-f7d4-49f9-944c-a11c001c70e3 font/woff2 23128b
+githmind-dashboard/_template.html
+dashboard-desktop-light/c202d78b-ecb1-49a1-8cff-d33a9cc1fed2  text/javascript 45305b
+dashboard-desktop-light/4e7c732f-81ae-459c-a58c-7c6e96fa532a  text/html 19712b
+dashboard-desktop-light/086f9176-95e7-446a-bc00-d3dfdee61675  text/css 188844b
+dashboard-desktop-light/87ade1f6-9f68-4622-a44e-3f7130786395  text/javascript 10751b
+dashboard-desktop-light/68074d1d-b6f5-4f32-8615-3225a59304b8  text/javascript 131835b
+dashboard-desktop-light/[skipped asset] 157a13ef-5bb2-463b-9947-6852522547c9 font/woff2 29400b
+dashboard-desktop-light/[skipped asset] 8100a7e9-a3c6-45d5-ac21-e6e4c4d501d7 font/woff2 23128b
+dashboard-desktop-light/_template.html
+dashboard-mobile-dark/7cfd5e21-1dc1-4604-bb7d-eb715626cc1f  text/javascript 45305b
+dashboard-mobile-dark/414fdd59-82d3-4c75-be9d-61c10195d8f5  text/html 19712b
+dashboard-mobile-dark/4ca96513-0007-440d-bca0-702cff7a5046  text/css 188844b
+dashboard-mobile-dark/58f9126c-e289-46fb-b438-6897494beae5  text/javascript 10751b
+dashboard-mobile-dark/354a6de5-f2f7-427f-941b-52ce61b297c5  text/javascript 131835b
+dashboard-mobile-dark/[skipped asset] 91ef065e-b29e-46db-a5f2-b51caf8b98f3 font/woff2 29400b
+dashboard-mobile-dark/[skipped asset] b3f06d45-fbac-4466-b25a-af5adefb4e91 font/woff2 23128b
+dashboard-mobile-dark/_template.html
+dashboard-mobile-light/7d10e209-b179-43b7-82b7-290eb0cf4d39  text/javascript 45305b
+dashboard-mobile-light/9d27ccc7-b28d-4512-97a3-5c8cecc92b4f  text/html 19712b
+dashboard-mobile-light/accc1c0d-dd70-4cf3-ba8a-086fcb8030e6  text/css 188844b
+dashboard-mobile-light/d27b7963-5bf3-4649-af73-3d7fb75377fb  text/javascript 10751b
+dashboard-mobile-light/1085dd95-3d3c-4392-bbee-47abaeb32658  text/javascript 131835b
+dashboard-mobile-light/[skipped asset] c7a43909-683b-4430-bf45-7c6982b64ec2 font/woff2 29400b
+dashboard-mobile-light/[skipped asset] 7b6407d5-2d09-4bb4-9dde-54a04edadee4 font/woff2 23128b
+dashboard-mobile-light/_template.html
+githmind-repo-overview/5d48e862-cb66-455a-a50f-84f203df1dfd  text/javascript 45305b
+githmind-repo-overview/8ccb8d9b-e33c-403d-ba0b-c17e45548404  text/javascript 10751b
+githmind-repo-overview/a2b992c6-cb14-4937-aae3-67ef8a428045  text/javascript 131835b
+githmind-repo-overview/[skipped asset] 8705e599-2d4e-4894-beb8-157a0e9cd2e9 font/woff2 29400b
+githmind-repo-overview/[skipped asset] 4ae139ba-1c6d-4c9a-8142-73c163d34079 font/woff2 23128b
+githmind-repo-overview/_template.html
+overview-desktop-light/84647e60-2a75-4818-85aa-f803cc6addbe  text/javascript 45305b
+overview-desktop-light/85666ddf-3b2e-4325-a138-433e2831bdd4  text/html 19152b
+overview-desktop-light/6358eb33-44f8-46a5-b536-cc4e3d8071e1  text/css 188844b
+overview-desktop-light/33952f52-a550-4651-911d-b7bf68efb9ad  text/javascript 10751b
+overview-desktop-light/69518cb2-0cbc-4bca-a05f-47139cabdf07  text/javascript 131835b
+overview-desktop-light/[skipped asset] ed0afa57-dce9-4221-9555-96b8b65ac9e4 font/woff2 29400b
+overview-desktop-light/[skipped asset] b483c11c-bdde-471f-bb61-bf91f45f5685 font/woff2 23128b
+overview-desktop-light/_template.html
+overview-mobile-dark/d28f9346-c1b6-4ed3-95d7-bf037990db84  text/javascript 45305b
+overview-mobile-dark/3847dcbf-8bbe-487d-8134-a327f4d08953  text/html 19152b
+overview-mobile-dark/24beb72e-1f18-487b-905e-b2388d7c28cd  text/css 188844b
+overview-mobile-dark/38849d38-286a-425f-99e9-baadedccd194  text/javascript 10751b
+overview-mobile-dark/47b95cae-a2cd-4f67-9e36-7909f11fa26a  text/javascript 131835b
+overview-mobile-dark/[skipped asset] 491db44a-2a8a-4857-af46-5eba3d6ce0c0 font/woff2 29400b
+overview-mobile-dark/[skipped asset] 3f5b3041-8940-4506-b361-afb11ec30b44 font/woff2 23128b
+overview-mobile-dark/_template.html
+overview-mobile-light/2d75bc9b-9989-438c-99d2-e893c204420f  text/javascript 45305b
+overview-mobile-light/06048ddb-ee07-40ec-9d0b-124ceec458da  text/html 19152b
+overview-mobile-light/00b6525f-d7ae-45b6-9f70-1f856dfcbfc1  text/css 188844b
+overview-mobile-light/51f94090-775d-47ca-b175-8dae4311eb99  text/javascript 10751b
+overview-mobile-light/41dbe7b7-6ea6-406c-b3ad-7c7d5782c213  text/javascript 131835b
+overview-mobile-light/[skipped asset] 8f2c7017-d67f-4a3c-9bf5-20c1d1ef544d font/woff2 29400b
+overview-mobile-light/[skipped asset] 000ba6a0-8ef1-408a-9653-0200d5243eb0 font/woff2 23128b
+overview-mobile-light/_template.html
+githmind-chat/ebda74f9-6a8b-4ad9-9a8f-e02110fc5a2c  text/javascript 45305b
+githmind-chat/044bbe8d-b821-4d7c-bc5b-3d1bbbf29879  text/javascript 10751b
+githmind-chat/90ce5ac4-6dc9-4e46-bddb-92f86b48f934  text/javascript 131835b
+githmind-chat/[skipped asset] 6aa56661-4240-4adb-898d-decf3e668847 font/woff2 29400b
+githmind-chat/[skipped asset] 967427b2-c642-4103-9775-08dfa2264f82 font/woff2 23128b
+githmind-chat/_template.html
+chat-desktop-light/5b10507f-2bc5-4b45-a607-f3319c86c375  text/javascript 45305b
+chat-desktop-light/2921ddae-43a8-4fe5-b3e4-f1702d4d405d  text/html 28025b
+chat-desktop-light/302d073d-4192-4565-b354-7295dd4c5c32  text/css 188844b
+chat-desktop-light/c7e7dc16-a602-4197-8096-61cd10cc2c7b  text/javascript 10751b
+chat-desktop-light/944a4cc5-4f35-4bcb-9397-39840b48a294  text/javascript 131835b
+chat-desktop-light/[skipped asset] b4ea035b-a578-47cf-a12b-c7849a34c9eb font/woff2 29400b
+chat-desktop-light/[skipped asset] d13a34f1-3db2-4ad7-8686-d89401cc9c36 font/woff2 23128b
+chat-desktop-light/_template.html
+chat-mobile-dark/9a87bc8d-d0d7-4459-a23c-96adbdf7d3f1  text/javascript 45305b
+chat-mobile-dark/1df42147-92be-4511-9deb-1fa87c32d022  text/html 28025b
+chat-mobile-dark/ed61c30f-20c4-433e-bcae-3518967a7697  text/css 188844b
+chat-mobile-dark/d0ff4130-bf06-43f5-b23b-8e084abe5ca6  text/javascript 10751b
+chat-mobile-dark/783d5bb6-c543-41bc-81b2-e3c4960a5a01  text/javascript 131835b
+chat-mobile-dark/[skipped asset] 996e690d-8b25-424c-9d5c-68aabd93d050 font/woff2 29400b
+chat-mobile-dark/[skipped asset] 9b05f956-3e7b-4dfc-88d4-f24fb5c40e01 font/woff2 23128b
+chat-mobile-dark/_template.html
+chat-mobile-light/96aa6f9f-5562-4e64-b54c-a0d5f196b7bd  text/javascript 45305b
+chat-mobile-light/ca1dbee2-53b7-4aba-9648-30542332b00a  text/html 28025b
+chat-mobile-light/90e5e5e4-cacf-4228-80fb-e516c7b536e5  text/css 188844b
+chat-mobile-light/100f810f-b835-41d1-aefb-0b61c6bd38d3  text/javascript 10751b
+chat-mobile-light/2ba32683-ceb4-409d-bf9d-940b4ef7d65d  text/javascript 131835b
+chat-mobile-light/[skipped asset] 740aa8ba-c1b7-4f7c-860e-467195ce031e font/woff2 29400b
+chat-mobile-light/[skipped asset] 4356fac7-0ca1-4b36-9e55-683c1bdfed1a font/woff2 23128b
+chat-mobile-light/_template.html
+githmind-settings/dc494e4d-5171-4bbf-80b2-95406e1cf2e8  text/javascript 45305b
+githmind-settings/7e8ddab4-2db1-41fe-af98-6d793d966c13  text/javascript 10751b
+githmind-settings/981cfe7b-a115-426e-a77b-8562c3cd3467  text/javascript 131835b
+githmind-settings/[skipped asset] d1ed4228-e4e0-4854-91e2-c70b1f8d11a3 font/woff2 29400b
+githmind-settings/[skipped asset] b0695e02-7b26-4b88-bb43-5bf1cd552470 font/woff2 23128b
+githmind-settings/_template.html
+settings-desktop-light/3cf65bd2-4413-4827-ab05-0dabfa8eabce  text/javascript 45305b
+settings-desktop-light/53621978-5eb5-46c8-a1af-4d2d6f4a7e58  text/html 15838b
+settings-desktop-light/70066cf4-777c-4f92-b062-dc3bf3bb15cd  text/css 188844b
+settings-desktop-light/0119c769-e86e-44a1-8dd4-11ae4b3d3e66  text/javascript 10751b
+settings-desktop-light/f4292725-d390-47ad-a3da-f87a4325bd41  text/javascript 131835b
+settings-desktop-light/[skipped asset] ef2ebceb-34af-4d20-991f-070c8317c030 font/woff2 29400b
+settings-desktop-light/[skipped asset] 9db447ca-3fa3-4e3b-b4fc-845add09881b font/woff2 23128b
+settings-desktop-light/_template.html
+settings-mobile-dark/a257bddc-7f7c-4144-bcec-4c3b8dcede1e  text/javascript 45305b
+settings-mobile-dark/ce3c51e3-5ec1-49ea-ac57-c0dcb7fd9378  text/html 15838b
+settings-mobile-dark/25462e91-2b8e-47b0-8d6e-5a0e11cc3669  text/css 188844b
+settings-mobile-dark/d7872576-058d-46fa-95fa-1ff2b15a36ac  text/javascript 10751b
+settings-mobile-dark/7a2adcd7-7e1b-47ea-9ca5-0929f5575b03  text/javascript 131835b
+settings-mobile-dark/[skipped asset] ce4a2928-1d15-48e4-b6b6-e01305061d6a font/woff2 29400b
+settings-mobile-dark/[skipped asset] 6b1d143a-3585-4d83-95ab-5707f2f0149a font/woff2 23128b
+settings-mobile-dark/_template.html
+settings-mobile-light/144cb1ee-b1ba-4cdf-9e1c-3569e5708272  text/javascript 45305b
+settings-mobile-light/57c121db-2279-4f0d-8306-ba8192f6a2e4  text/html 15838b
+settings-mobile-light/52f269f9-6ae1-4625-b17e-5785f98a7ca7  text/css 188844b
+settings-mobile-light/8cfb0d44-24ac-4e17-8147-5b9427c55f61  text/javascript 10751b
+settings-mobile-light/f5840e3b-9314-430d-8c6d-cc711f1125bb  text/javascript 131835b
+settings-mobile-light/[skipped asset] c4606591-729c-4c2d-9199-aefe5158e90a font/woff2 29400b
+settings-mobile-light/[skipped asset] 1651c208-ee5c-4c1f-b984-ec046a48af10 font/woff2 23128b
+settings-mobile-light/_template.html

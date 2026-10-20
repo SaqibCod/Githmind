@@ -160,6 +160,8 @@
   /* the logo's hexagon outline is the one colour the design pins in BOTH
      themes (it does not follow --gm-accent) */
   --color-gm-logo-ring: #e08a2c;
+  /* keyboard focus ring; also theme-independent in the design */
+  --color-gm-focus: #e08a2c;
 
   /* -- ambient / decorative ---------------------------------------------- */
   --color-gm-net: var(--gm-net);
@@ -305,11 +307,17 @@
   --radius-gm-band-sm: 28px;
 
   /* -- animation --------------------------------------------------------- */
+  /* Each page in the design tunes its own entrance: the landing drifts in
+     from further away than the sign-in screen, so the two keyframes differ
+     in blur and travel and cannot share one name. */
   --animate-gm-rise: gm-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-gm-rise-md: gm-rise-md 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   --animate-gm-scene: gm-scene 18s ease-in-out infinite both;
   --animate-gm-cap: gm-cap 18s ease-in-out infinite both;
   --animate-gm-spin-slow: gm-spin 70s linear infinite;
   --animate-gm-spin-orbit: gm-spin 14s linear infinite;
+  --animate-gm-spin-ring: gm-spin 12s linear infinite;
+  --animate-gm-spin-fast: gm-spin 0.9s linear infinite;
   --animate-gm-bob: gm-bob 7s ease-in-out infinite alternate;
   --animate-gm-plate: gm-plate 3s ease-in-out infinite alternate;
   --animate-gm-arch: gm-arch 3.2s ease-in-out infinite alternate;
@@ -321,10 +329,15 @@
   --animate-gm-blink: gm-blink 1s steps(1) infinite;
   --animate-gm-chip: gm-chip 6s ease-in-out infinite both;
   --animate-gm-twinkle: gm-twinkle 3s ease-in-out infinite;
+  --animate-gm-twinkle-fast: gm-twinkle 2.4s ease-in-out infinite;
   --animate-gm-fill: gm-fill 6s ease-in-out infinite;
 
   @keyframes gm-rise {
     from { opacity: 0; filter: blur(12px); transform: translateY(18px); }
+    to { opacity: 1; filter: blur(0); transform: translateY(0); }
+  }
+  @keyframes gm-rise-md {
+    from { opacity: 0; filter: blur(10px); transform: translateY(16px); }
     to { opacity: 1; filter: blur(0); transform: translateY(0); }
   }
   @keyframes gm-scene {
@@ -585,6 +598,12 @@
     radial-gradient(700px 480px at 8% 40%, var(--gm-glow2), transparent 70%),
     var(--gm-bg);
 }
+@utility gm-login-glow {
+  background:
+    radial-gradient(800px 500px at 75% 40%, var(--gm-glow1), transparent 70%),
+    radial-gradient(600px 400px at 12% 85%, var(--gm-glow2), transparent 70%),
+    var(--gm-bg);
+}
 @utility gm-start-glow {
   background:
     radial-gradient(700px 360px at 50% 100%, var(--gm-glow1), transparent 70%),
@@ -649,6 +668,22 @@
 }
 @utility gm-view-box {
   transform-box: view-box;
+}
+
+/* Keyboard focus ring. Every design page except the landing defines this;
+   the landing's omission reads as an oversight, so .gm-motion (the shared
+   design-page root hook) carries it for all of them. Sign-in and the OAuth
+   callback use a 3px offset, the app pages 2px — override the custom
+   property on the page root to switch. */
+.gm-motion {
+  --gm-focus-offset: 3px;
+}
+.gm-motion a:focus-visible,
+.gm-motion button:focus-visible,
+.gm-motion input:focus-visible,
+.gm-motion textarea:focus-visible {
+  outline: 2px solid var(--color-gm-focus);
+  outline-offset: var(--gm-focus-offset);
 }
 
 @media (prefers-reduced-motion: reduce) {

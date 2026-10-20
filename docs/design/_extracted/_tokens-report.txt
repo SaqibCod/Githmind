@@ -1,0 +1,84 @@
+# pages with token blocks: 7
+
+## SHARED by all 7 pages (10)
+var	dark	light	consistent-across-pages?
+--bg	#07070a	#f7f6fa	yes
+--cta-bg	#f3f3f6	#14141a	yes
+--cta-fg	#0a0a0e	#f7f7fa	yes
+--faint	#8c8c98	#6a6a76	yes
+--glow1	rgba(245,166,91,.14)	rgba(245,166,91,.24)	NO -> dark:rgba(245,166,91,.14)|rgba(245,166,91,.15)|rgba(245,166,91,.09)|rgba(245,166,91,.08) light:rgba(245,166,91,.24)|rgba(245,166,91,.26)|rgba(245,166,91,.16)|rgba(245,166,91,.14)
+--line2	rgba(255,255,255,.14)	rgba(10,10,20,.18)	NO -> dark:rgba(255,255,255,.14)|rgba(255,255,255,.16) light:rgba(10,10,20,.18)|rgba(10,10,20,.2)
+--logo	#ededf0	#16161c	yes
+--muted	#a8a8b4	#52525e	yes
+--strong	#f3f3f6	#0d0d12	yes
+--text	#ededf0	#16161c	yes
+
+## PARTIAL (36)
+--accent	[landing,login,chat]	dark=#f5a65b	light=#e08a2c
+--accent-t	[landing,login,dashboard,overview,chat,settings]	dark=#f5a65b	light=#a8560a
+--card	[dashboard,overview,chat,settings]	dark=#0b0b10	light=#ffffff
+--chip-bd	[landing,chat]	dark=rgba(245,166,91,.4)	light=rgba(224,138,44,.55)
+--chip-bg	[landing,chat]	dark=rgba(245,166,91,.09)	light=rgba(224,138,44,.12)
+--chip-fg	[landing,chat]	dark=#f7be8a	light=#a8560a
+--err-bd	[login,callback,dashboard,overview,chat,settings]	dark=rgba(248,113,113,.4)	light=rgba(220,38,38,.45)
+--err-bg	[login,callback,dashboard,overview,chat,settings]	dark=rgba(248,113,113,.08)	light=rgba(220,38,38,.07)
+--err-t	[login,callback,dashboard,overview,chat,settings]	dark=#fca5a5	light=#b91c1c
+--glow2	[landing,login]	dark=rgba(139,124,246,.09)	light=rgba(139,124,246,.14)
+--halo	[landing,login,callback]	dark=rgba(245,166,91,.28)	light=rgba(245,166,91,.34)
+--line	[landing,login,dashboard,overview,chat,settings]	dark=rgba(255,255,255,.09)	light=rgba(10,10,20,.1)
+--link	[dashboard,overview,chat,settings]	dark=#a89cff	light=#5546c8
+--nav-on	[dashboard,overview,chat,settings]	dark=rgba(255,255,255,.08)	light=rgba(10,10,20,.07)
+--nav-on-t	[dashboard,overview,chat,settings]	dark=#ffffff	light=#0d0d12
+--net	[landing,login]	dark=rgba(255,255,255,.2)	light=rgba(20,20,40,.3)
+--node	[landing,login]	dark=#ffffff	light=#2a2a36
+--ok-bd	[dashboard,overview,chat]	dark=rgba(74,222,128,.3)	light=rgba(22,163,74,.35)
+--ok-bg	[dashboard,overview,chat]	dark=rgba(74,222,128,.1)	light=rgba(22,163,74,.1)
+--ok-t	[dashboard,overview,chat]	dark=#86efac	light=#15803d
+--pe-bd	[dashboard,overview]	dark=rgba(255,255,255,.16)	light=rgba(10,10,20,.2)
+--pe-bg	[dashboard,overview]	dark=rgba(255,255,255,.06)	light=rgba(10,10,20,.05)
+--pe-t	[dashboard,overview]	dark=#c4c4ce	light=#52525e
+--pill	[landing,login,dashboard,overview,chat,settings]	dark=#0e0e13	light=#ffffff
+--side	[dashboard,overview,chat,settings]	dark=#0a0a0e	light=#ffffff
+--skel	[dashboard,settings]	dark=#1a1a22	light=#e6e6ee
+--soft	[landing,login]	dark=#c9c9d3	light=#3a3a46
+--tab-on-bg	[login,callback,dashboard,overview,chat,settings]	dark=#f3f3f6	light=#14141a
+--tab-on-fg	[login,callback,dashboard,overview,chat,settings]	dark=#0a0a0e	light=#f7f7fa
+--track	[dashboard,overview,chat]	dark=#1a1a22	light=#e6e6ee
+--vi-bd	[dashboard,overview,chat]	dark=rgba(168,156,255,.3)	light=rgba(85,70,200,.35)
+--vi-bg	[dashboard,overview,chat]	dark=rgba(168,156,255,.12)	light=rgba(85,70,200,.1)
+--vi-t	[dashboard,overview,chat]	dark=#b9aeff	light=#5546c8
+--warn-bd	[login,dashboard,overview,chat]	dark=rgba(245,166,91,.4)	light=rgba(224,138,44,.55)
+--warn-bg	[login,dashboard,overview,chat]	dark=rgba(245,166,91,.08)	light=rgba(224,138,44,.12)
+--warn-t	[login,dashboard,overview,chat]	dark=#f7be8a	light=#8f4707
+
+## PAGE-UNIQUE (30)
+--band	[landing]	dark=radial-gradient(900px 400px at 50% 0%,#f6f6fa,#e6e6ec)	light=radial-gradient(900px 400px at 50% 0%,#241f3d,#0e0d16)
+--band-m	[landing]	dark=#50505c	light=#b4b4c0
+--band-t	[landing]	dark=#121217	light=#f3f3f6
+--bub	[chat]	dark=#1b1b24	light=#eceaf3
+--card-a	[landing]	dark=#111118	light=#ffffff
+--card-b	[landing]	dark=#0b0b10	light=#fbfafd
+--card-hi	[overview]	dark=#111118	light=#fbfafd
+--code-bg	[chat]	dark=#0f0f15	light=#f1f0f6
+--fc-bg	[landing]	dark=#0c0c11	light=#ffffff
+--fc-bub	[landing]	dark=#1b1b24	light=#eeeef4
+--fc-f	[landing]	dark=#8c8c98	light=#6a6a76
+--fc-line	[landing]	dark=rgba(255,255,255,.08)	light=rgba(10,10,20,.1)
+--fc-m	[landing]	dark=#a8a8b4	light=#52525e
+--fc-t	[landing]	dark=#ededf0	light=#16161c
+--fc-track	[landing]	dark=#1b1b24	light=#e6e6ee
+--g1	[landing]	dark=rgba(139,124,246,.22)	light=rgba(139,124,246,.14)
+--g2	[landing]	dark=rgba(245,166,91,.2)	light=rgba(245,166,91,.16)
+--g3	[landing]	dark=rgba(45,212,191,.16)	light=rgba(45,212,191,.12)
+--gb-1	[landing]	dark=rgba(245,166,91,.16)	light=rgba(245,166,91,.3)
+--gb-2	[landing]	dark=rgba(245,166,91,.04)	light=rgba(245,166,91,.08)
+--gb-fg	[landing]	dark=#fff4e8	light=#7a3d04
+--ok	[landing]	dark=#86efac	light=#15803d
+--plate-a	[landing]	dark=#2a2a36	light=#c4c4d0
+--plate-b	[landing]	dark=#0c0c11	light=#8e8e9e
+--ring	[callback]	dark=rgba(255,255,255,.12)	light=rgba(10,10,20,.12)
+--seg-on	[settings]	dark=#f3f3f6	light=#14141a
+--seg-on-t	[settings]	dark=#0a0a0e	light=#f7f7fa
+--skel2	[dashboard]	dark=#14141a	light=#eeeef4
+--violet-t	[landing]	dark=#b9aeff	light=#5546c8
+--warn-t2	[overview]	dark=#d9b48a	light=#7a4a14

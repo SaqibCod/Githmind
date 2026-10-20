@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>githMind Landing</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#07070a}
+a{color:inherit;text-decoration:none}
+[data-gm="dark"]{--bg:#07070a;--glow1:rgba(245,166,91,.14);--glow2:rgba(139,124,246,.09);--text:#ededf0;--strong:#f3f3f6;--soft:#c9c9d3;--muted:#a8a8b4;--faint:#8c8c98;--line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.14);--pill:#0e0e13;--accent:#f5a65b;--accent-t:#f5a65b;--violet-t:#b9aeff;--ok:#86efac;--card-a:#111118;--card-b:#0b0b10;--cta-bg:#f3f3f6;--cta-fg:#0a0a0e;--gb-fg:#fff4e8;--gb-1:rgba(245,166,91,.16);--gb-2:rgba(245,166,91,.04);--net:rgba(255,255,255,.2);--node:#ffffff;--plate-a:#2a2a36;--plate-b:#0c0c11;--halo:rgba(245,166,91,.28);--logo:#ededf0;--band:radial-gradient(900px 400px at 50% 0%,#f6f6fa,#e6e6ec);--band-t:#121217;--band-m:#50505c;--fc-bg:#0c0c11;--fc-t:#ededf0;--fc-m:#a8a8b4;--fc-f:#8c8c98;--fc-line:rgba(255,255,255,.08);--fc-bub:#1b1b24;--fc-track:#1b1b24;--chip-bg:rgba(245,166,91,.09);--chip-bd:rgba(245,166,91,.4);--chip-fg:#f7be8a;--g1:rgba(139,124,246,.22);--g2:rgba(245,166,91,.2);--g3:rgba(45,212,191,.16)}
+[data-gm="light"]{--bg:#f7f6fa;--glow1:rgba(245,166,91,.24);--glow2:rgba(139,124,246,.14);--text:#16161c;--strong:#0d0d12;--soft:#3a3a46;--muted:#52525e;--faint:#6a6a76;--line:rgba(10,10,20,.1);--line2:rgba(10,10,20,.18);--pill:#ffffff;--accent:#e08a2c;--accent-t:#a8560a;--violet-t:#5546c8;--ok:#15803d;--card-a:#ffffff;--card-b:#fbfafd;--cta-bg:#14141a;--cta-fg:#f7f7fa;--gb-fg:#7a3d04;--gb-1:rgba(245,166,91,.3);--gb-2:rgba(245,166,91,.08);--net:rgba(20,20,40,.3);--node:#2a2a36;--plate-a:#c4c4d0;--plate-b:#8e8e9e;--halo:rgba(245,166,91,.34);--logo:#16161c;--band:radial-gradient(900px 400px at 50% 0%,#241f3d,#0e0d16);--band-t:#f3f3f6;--band-m:#b4b4c0;--fc-bg:#ffffff;--fc-t:#16161c;--fc-m:#52525e;--fc-f:#6a6a76;--fc-line:rgba(10,10,20,.1);--fc-bub:#eeeef4;--fc-track:#e6e6ee;--chip-bg:rgba(224,138,44,.12);--chip-bd:rgba(224,138,44,.55);--chip-fg:#a8560a;--g1:rgba(139,124,246,.14);--g2:rgba(245,166,91,.16);--g3:rgba(45,212,191,.12)}
+@keyframes gm-rise{from{opacity:0;filter:blur(12px);transform:translateY(18px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}
+@keyframes gm-scene{0%{opacity:0;filter:blur(18px);transform:scale(.9)}6%{opacity:1;filter:blur(0);transform:scale(1)}30%{opacity:1;filter:blur(0);transform:scale(1)}36%{opacity:0;filter:blur(18px);transform:scale(1.08)}100%{opacity:0;filter:blur(18px);transform:scale(1.08)}}
+@keyframes gm-cap{0%{opacity:0;transform:translateY(10px)}6%{opacity:1;transform:translateY(0)}30%{opacity:1;transform:translateY(0)}36%{opacity:0;transform:translateY(-10px)}100%{opacity:0}}
+@keyframes gm-spin{to{transform:rotate(360deg)}}
+@keyframes gm-bob{0%{transform:rotate(-5deg) translateY(4px)}100%{transform:rotate(5deg) translateY(-6px)}}
+@keyframes gm-plate{0%{transform:translateY(0)}100%{transform:translateY(-7px)}}
+@keyframes gm-arch{0%{transform:translateY(0)}100%{transform:translateY(-8px)}}
+@keyframes gm-lab{0%{opacity:.4}4%{opacity:1}20%{opacity:1}28%{opacity:.4}100%{opacity:.4}}
+@keyframes gm-node{0%{transform:scale(1)}4%{transform:scale(1.9)}20%{transform:scale(1.9)}28%{transform:scale(1)}100%{transform:scale(1)}}
+@keyframes gm-breathe{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+@keyframes gm-glow{0%,100%{box-shadow:0 0 0 rgba(245,166,91,0),inset 0 0 12px rgba(245,166,91,.15)}50%{box-shadow:0 0 28px rgba(245,166,91,.38),inset 0 0 18px rgba(245,166,91,.3)}}
+@keyframes gm-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes gm-fill{0%{width:8%}80%{width:100%}100%{width:100%}}
+@keyframes gm-blink{50%{opacity:0}}
+@keyframes gm-chip{0%,10%{opacity:0;transform:translateY(8px)}22%,92%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+@keyframes gm-twinkle{0%,100%{opacity:.3}50%{opacity:1}}
+.gm-rise{animation:gm-rise .9s cubic-bezier(.2,.7,.2,1) both}
+.gm-scene{position:absolute;inset:0;width:100%;height:100%;animation:gm-scene 18s ease-in-out infinite both}
+.gm-cap{position:absolute;left:0;right:0;text-align:center;animation:gm-cap 18s ease-in-out infinite both}
+.gm-fb{transform-box:fill-box;transform-origin:center}
+.gm-vb{transform-box:view-box}
+.gm-card{transition:transform .35s ease,border-color .35s ease}
+.gm-card:hover{transform:translateY(-4px);border-color:rgba(245,166,91,.45) !important}
+@media (max-width:640px){
+.gm-px{padding-left:20px !important;padding-right:20px !important}
+.gm-tight{padding-top:56px !important;padding-bottom:56px !important}
+.gm-h1{font-size:42px !important;line-height:1.05 !important}
+.gm-h2{font-size:32px !important}
+.gm-h2b{font-size:36px !important}
+.gm-lead{font-size:16px !important}
+.gm-navlinks{display:none !important}
+.gm-lab{font-size:22px !important}
+.gm-band{border-radius:28px 28px 0 0 !important;margin-top:40px !important}
+.gm-hero{padding-top:28px !important}
+}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}.gm-scene{opacity:0}.gm-scene.gm-first{opacity:1}.gm-cap{opacity:0}.gm-cap.gm-first{opacity:1}}
+</style>
+</helmet>
+<div data-gm="{{theme}}" style="min-height: 2900px; background: var(--bg); color: var(--text); font-family: 'Geist', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+<div style="position: relative; display: flex; flex-direction: column; align-items: center; background: radial-gradient(900px 560px at 76% 22%, var(--glow1), transparent 70%), radial-gradient(700px 480px at 8% 40%, var(--glow2), transparent 70%), var(--bg)">
+<div class="gm-px" style="width: 100%; max-width: 1240px; box-sizing: border-box; padding: 0 32px; display: flex; flex-direction: column">
+
+<div class="gm-rise" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; min-height: 84px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; color: var(--strong)">
+<svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7" fill="none" stroke="#e08a2c" stroke-width="1.6"></polygon><polygon points="12,7 16.5,9.5 12,12 7.5,9.5" style="fill: var(--logo)"></polygon><polygon points="7.5,9.5 12,12 12,17 7.5,14.5" fill="#8b7cf6"></polygon><polygon points="16.5,9.5 12,12 12,17 16.5,14.5" fill="#f5a65b"></polygon></svg>
+<span>githMind</span>
+</a>
+<div class="gm-navlinks" style="display: flex; flex-wrap: wrap; gap: 30px; font-size: 14px; color: var(--muted)">
+<a href="#how">How it works</a>
+<a href="#features">Features</a>
+<a href="#start">Get started</a>
+</div>
+<a href="Login.dc.html" style="display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--line2); background: var(--pill); color: var(--strong); font-size: 14px; font-weight: 500">Sign in</a>
+</div>
+
+<div class="gm-hero" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 56px 0 24px">
+
+<div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 28px; min-width: 0">
+<h1 class="gm-h1" style="margin: 0; font-size: 70px; line-height: 1.02; letter-spacing: -0.035em; font-weight: 500; color: var(--strong)">
+<span class="gm-rise" style="display: block; animation-delay: .15s">Ask your codebase.</span>
+<span class="gm-rise" style="display: block; animation-delay: .35s; color: var(--muted)">Get answers with receipts.</span>
+</h1>
+<p class="gm-rise gm-lead" style="margin: 0; font-size: 18px; line-height: 1.55; color: var(--muted); max-width: 500px; animation-delay: .55s">githMind indexes your GitHub repositories once, then answers questions in plain language. Every reply points to the files and lines it came from.</p>
+<div class="gm-rise" style="display: flex; flex-wrap: wrap; align-items: center; gap: 18px; animation-delay: .75s">
+<a href="Login.dc.html" style="display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 28px; border-radius: 999px; border: 1px solid var(--accent); background: linear-gradient(180deg, var(--gb-1), var(--gb-2)); color: var(--gb-fg); font-size: 15px; font-weight: 500; animation: gm-glow 3.6s ease-in-out infinite">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"></path></svg>
+Continue with GitHub
+</a>
+<a href="#how" style="display: flex; align-items: center; gap: 8px; height: 52px; font-size: 15px; color: var(--soft)">See how it works <span aria-hidden="true">→</span></a>
+</div>
+<div class="gm-rise" style="display: flex; flex-direction: column; gap: 14px; padding-top: 18px; animation-delay: .95s">
+<span style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint)">Works with the languages in your repos</span>
+<div style="overflow: hidden; max-width: 520px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent); mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent)">
+<div style="display: flex; width: max-content; animation: gm-marquee 28s linear infinite">
+<div style="display: flex; gap: 44px; padding-right: 44px; font-size: 19px; font-weight: 500; color: var(--muted); white-space: nowrap"><span>Java</span><span>TypeScript</span><span>Python</span><span>Go</span><span>Rust</span><span>Kotlin</span><span>C#</span><span>Ruby</span></div>
+<div style="display: flex; gap: 44px; padding-right: 44px; font-size: 19px; font-weight: 500; color: var(--muted); white-space: nowrap" aria-hidden="true"><span>Java</span><span>TypeScript</span><span>Python</span><span>Go</span><span>Rust</span><span>Kotlin</span><span>C#</span><span>Ruby</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="flex: 1 1 460px; display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0">
+<div style="position: relative; width: 100%; max-width: 580px; aspect-ratio: 540 / 460">
+<div style="position: absolute; inset: 14%; border-radius: 50%; background: radial-gradient(circle, var(--halo), transparent 68%); animation: gm-breathe 6s ease-in-out infinite"></div>
+
+<svg viewBox="-70 -30 540 460" style="position: absolute; inset: 0; width: 100%; height: 100%" role="img" aria-label="Network hexagon with orbiting nodes labelled Repos, Files, Chunks, Citations and Answers">
+<defs>
+<filter id="dotglow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="3"></feGaussianBlur></filter>
+</defs>
+<g class="gm-vb" style="transform-origin: 200px 200px; animation: gm-spin 70s linear infinite">
+<g style="stroke: var(--net); stroke-width: 1; fill: none">
+<polygon points="200,2 371,101 371,299 200,398 29,299 29,101"></polygon>
+<polygon points="200,2 300,160 200,398 100,160" opacity="0.45"></polygon>
+<path d="M29 101 L150 190 M371 101 L250 190 M200 398 L200 240 M29 299 L140 230 M371 299 L260 230 M200 2 L200 150" opacity="0.5"></path>
+</g>
+<g style="fill: var(--node)"><circle cx="200" cy="2" r="3" style="animation: gm-twinkle 3s ease-in-out infinite"></circle><circle cx="371" cy="101" r="3" style="animation: gm-twinkle 3s ease-in-out .6s infinite"></circle><circle cx="371" cy="299" r="3" style="animation: gm-twinkle 3s ease-in-out 1.2s infinite"></circle><circle cx="200" cy="398" r="3" style="animation: gm-twinkle 3s ease-in-out 1.8s infinite"></circle><circle cx="29" cy="299" r="3" style="animation: gm-twinkle 3s ease-in-out 2.4s infinite"></circle><circle cx="29" cy="101" r="3" style="animation: gm-twinkle 3s ease-in-out .3s infinite"></circle></g>
+</g>
+
+<circle cx="200" cy="200" r="185" fill="none" style="stroke: var(--net)" stroke-width="1"></circle>
+<g class="gm-vb" style="transform-origin: 200px 200px; animation: gm-spin 14s linear infinite">
+<circle cx="200" cy="15" r="5" fill="#f5a65b" filter="url(#dotglow)"></circle>
+<circle cx="200" cy="15" r="3" style="fill: var(--node)"></circle>
+</g>
+
+<g>
+<circle class="gm-fb" cx="200" cy="15" r="4" style="fill: var(--node); animation: gm-node 10s ease-in-out 0s infinite"></circle>
+<text class="gm-lab" x="200" y="-6" text-anchor="middle" font-family="Geist, system-ui, sans-serif" font-size="15" style="fill: var(--strong); animation: gm-lab 10s ease-in-out 0s infinite">Repos</text>
+<circle class="gm-fb" cx="376" cy="143" r="4" style="fill: var(--node); animation: gm-node 10s ease-in-out 2s infinite"></circle>
+<text class="gm-lab" x="392" y="148" text-anchor="start" font-family="Geist, system-ui, sans-serif" font-size="15" style="fill: var(--strong); animation: gm-lab 10s ease-in-out 2s infinite">Files</text>
+<circle class="gm-fb" cx="309" cy="350" r="4" style="fill: var(--node); animation: gm-node 10s ease-in-out 4s infinite"></circle>
+<text class="gm-lab" x="309" y="378" text-anchor="middle" font-family="Geist, system-ui, sans-serif" font-size="15" style="fill: var(--strong); animation: gm-lab 10s ease-in-out 4s infinite">Chunks</text>
+<circle class="gm-fb" cx="91" cy="350" r="4" style="fill: var(--node); animation: gm-node 10s ease-in-out 6s infinite"></circle>
+<text class="gm-lab" x="91" y="378" text-anchor="middle" font-family="Geist, system-ui, sans-serif" font-size="15" style="fill: var(--strong); animation: gm-lab 10s ease-in-out 6s infinite">Citations</text>
+<circle class="gm-fb" cx="24" cy="143" r="4" style="fill: var(--node); animation: gm-node 10s ease-in-out 8s infinite"></circle>
+<text class="gm-lab" x="8" y="148" text-anchor="end" font-family="Geist, system-ui, sans-serif" font-size="15" style="fill: var(--strong); animation: gm-lab 10s ease-in-out 8s infinite">Answers</text>
+</g>
+</svg>
+
+<svg class="gm-scene gm-first" viewBox="-70 -30 540 460" style="animation-delay: 0s" aria-hidden="true">
+<defs>
+<linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd9a8"></stop><stop offset="1" stop-color="#d9822b"></stop></linearGradient>
+<linearGradient id="a2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b9aeff"></stop><stop offset="1" stop-color="#4a3bb5"></stop></linearGradient>
+<linearGradient id="a3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f4f8"></stop><stop offset="1" stop-color="#7d7d8c"></stop></linearGradient>
+<linearGradient id="a4" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#15151c"></stop><stop offset="1" stop-color="#3a3a48"></stop></linearGradient>
+</defs>
+<g class="gm-fb" style="animation: gm-bob 7s ease-in-out infinite alternate">
+<polygon points="200,92 290,142 200,192 110,142" fill="url(#a3)"></polygon>
+<polygon points="110,142 200,192 200,296 110,246" fill="url(#a2)"></polygon>
+<polygon points="290,142 200,192 200,296 290,246" fill="url(#a1)"></polygon>
+<polygon points="200,296 290,246 200,330 110,246" fill="url(#a4)"></polygon>
+<path d="M200 92 L290 142 L290 246 L200 330 L110 246 L110 142 Z M200 192 L200 330 M110 142 L200 192 L290 142" stroke="rgba(255,255,255,0.38)" stroke-width="1" fill="none"></path>
+<circle cx="200" cy="192" r="5" fill="#ffffff" style="animation: gm-twinkle 2.4s ease-in-out infinite"></circle>
+</g>
+</svg>
+
+<svg class="gm-scene" viewBox="-70 -30 540 460" style="animation-delay: 6s" aria-hidden="true">
+<defs>
+<linearGradient id="b1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3f3f8"></stop><stop offset="1" stop-color="#7a7a8a"></stop></linearGradient>
+<linearGradient id="b2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd9a8"></stop><stop offset="1" stop-color="#b8601f"></stop></linearGradient>
+<linearGradient id="b3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color: var(--plate-a)"></stop><stop offset="1" style="stop-color: var(--plate-b)"></stop></linearGradient>
+</defs>
+<g>
+<g class="gm-fb" style="animation: gm-plate 3s ease-in-out -2.5s infinite alternate"><polygon points="110,282 155,304 245,304 290,282 290,270 245,292 155,292 110,270" fill="url(#b3)" stroke="rgba(45,212,191,0.6)" stroke-width="1"></polygon><polygon points="110,270 155,248 245,248 290,270 245,292 155,292" fill="url(#b1)" opacity="0.6" style="stroke: var(--net)"></polygon></g>
+<g class="gm-fb" style="animation: gm-plate 3s ease-in-out -2s infinite alternate"><polygon points="110,252 155,274 245,274 290,252 290,240 245,262 155,262 110,240" fill="url(#b3)" stroke="rgba(45,212,191,0.6)" stroke-width="1"></polygon><polygon points="110,240 155,218 245,218 290,240 245,262 155,262" fill="url(#b1)" opacity="0.7" style="stroke: var(--net)"></polygon></g>
+<g class="gm-fb" style="animation: gm-plate 3s ease-in-out -1.5s infinite alternate"><polygon points="110,222 155,244 245,244 290,222 290,210 245,232 155,232 110,210" fill="url(#b3)" stroke="rgba(45,212,191,0.6)" stroke-width="1"></polygon><polygon points="110,210 155,188 245,188 290,210 245,232 155,232" fill="url(#b1)" opacity="0.8" style="stroke: var(--net)"></polygon></g>
+<g class="gm-fb" style="animation: gm-plate 3s ease-in-out -1s infinite alternate"><polygon points="110,192 155,214 245,214 290,192 290,180 245,202 155,202 110,180" fill="url(#b3)" stroke="rgba(45,212,191,0.6)" stroke-width="1"></polygon><polygon points="110,180 155,158 245,158 290,180 245,202 155,202" fill="url(#b1)" opacity="0.9" style="stroke: var(--net)"></polygon></g>
+<g class="gm-fb" style="animation: gm-plate 3s ease-in-out -0.5s infinite alternate"><polygon points="110,162 155,184 245,184 290,162 290,150 245,172 155,172 110,150" fill="url(#b3)" stroke="rgba(45,212,191,0.6)" stroke-width="1"></polygon><polygon points="110,150 155,128 245,128 290,150 245,172 155,172" fill="url(#b1)" style="stroke: var(--net)"></polygon></g>
+<g class="gm-fb" style="animation: gm-plate 3s ease-in-out 0s infinite alternate"><polygon points="110,132 155,154 245,154 290,132 290,120 245,142 155,142 110,120" fill="url(#b3)" stroke="rgba(245,166,91,0.8)" stroke-width="1"></polygon><polygon points="110,120 155,98 245,98 290,120 245,142 155,142" fill="url(#b2)"></polygon></g>
+</g>
+</svg>
+
+<svg class="gm-scene" viewBox="-70 -30 540 460" style="animation-delay: 12s" aria-hidden="true">
+<defs>
+<linearGradient id="c1" gradientUnits="userSpaceOnUse" x1="0" y1="100" x2="0" y2="320"><stop offset="0" stop-color="#e08a47"></stop><stop offset="0.5" stop-color="#3a4a7a"></stop><stop offset="1" stop-color="#0f1426"></stop></linearGradient>
+</defs>
+<g fill="none" stroke="url(#c1)" stroke-width="9" stroke-linecap="round">
+<path class="gm-fb" d="M70 320 C70 90 330 90 330 320" style="animation: gm-arch 3.2s ease-in-out 0s infinite alternate"></path>
+<path class="gm-fb" d="M84 320 C84 114 316 114 316 320" style="animation: gm-arch 3.2s ease-in-out .2s infinite alternate"></path>
+<path class="gm-fb" d="M98 320 C98 138 302 138 302 320" style="animation: gm-arch 3.2s ease-in-out .4s infinite alternate"></path>
+<path class="gm-fb" d="M112 320 C112 162 288 162 288 320" style="animation: gm-arch 3.2s ease-in-out .6s infinite alternate"></path>
+<path class="gm-fb" d="M126 320 C126 186 274 186 274 320" style="animation: gm-arch 3.2s ease-in-out .8s infinite alternate"></path>
+<path class="gm-fb" d="M140 320 C140 210 260 210 260 320" style="animation: gm-arch 3.2s ease-in-out 1s infinite alternate"></path>
+<path class="gm-fb" d="M154 320 C154 234 246 234 246 320" style="animation: gm-arch 3.2s ease-in-out 1.2s infinite alternate"></path>
+</g>
+<path d="M90 250 C110 140 200 112 290 150" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+</div>
+
+<div style="position: relative; width: 100%; max-width: 420px; height: 52px; margin-top: 4px">
+<div class="gm-cap gm-first" style="animation-delay: 0s; font-size: 15px; color: var(--soft)">Every repository you own, in one place.</div>
+<div class="gm-cap" style="animation-delay: 6s; font-size: 15px; color: var(--soft)">Indexed file by file, layer by layer.</div>
+<div class="gm-cap" style="animation-delay: 12s; font-size: 15px; color: var(--soft)">Answers that cite their sources.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="how" class="gm-px gm-tight" style="width: 100%; max-width: 1240px; box-sizing: border-box; padding: 96px 32px 24px; align-self: center; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 560px">
+<span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: var(--accent-t)">How it works</span>
+<h2 class="gm-h2" style="margin: 0; font-size: 44px; line-height: 1.08; letter-spacing: -0.03em; font-weight: 500; color: var(--strong)">Three steps from sign-in to answer.</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px">
+<div class="gm-card" style="padding: 30px; border-radius: 22px; border: 1px solid var(--line); background: linear-gradient(180deg, var(--card-a), var(--card-b)); display: flex; flex-direction: column; gap: 14px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 13px; color: var(--accent-t)">01</div>
+<h3 style="margin: 0; font-size: 22px; font-weight: 500; color: var(--strong)">Connect GitHub</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">Sign in with OAuth. Your public and private repositories appear in a single list.</p>
+</div>
+<div class="gm-card" style="padding: 30px; border-radius: 22px; border: 1px solid var(--line); background: linear-gradient(180deg, var(--card-a), var(--card-b)); display: flex; flex-direction: column; gap: 14px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 13px; color: var(--violet-t)">02</div>
+<h3 style="margin: 0; font-size: 22px; font-weight: 500; color: var(--strong)">Index a repository</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">Watch files and chunks get processed live. Re-index whenever the code changes.</p>
+</div>
+<div class="gm-card" style="padding: 30px; border-radius: 22px; border: 1px solid var(--line); background: linear-gradient(180deg, var(--card-a), var(--card-b)); display: flex; flex-direction: column; gap: 14px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 13px; color: var(--accent-t)">03</div>
+<h3 style="margin: 0; font-size: 22px; font-weight: 500; color: var(--strong)">Chat with citations</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">Replies stream in and finish with up to 8 sources, each pointing at a file and line range.</p>
+</div>
+</div>
+</div>
+
+<div id="features" class="gm-band" style="margin-top: 80px; background: var(--band); border-radius: 44px 44px 0 0; color: var(--band-t); display: flex; flex-direction: column; align-items: center">
+<div class="gm-px gm-tight" style="width: 100%; max-width: 1240px; box-sizing: border-box; padding: 96px 32px 104px; display: flex; flex-direction: column; align-items: center; gap: 52px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; max-width: 640px">
+<h2 class="gm-h2b" style="margin: 0; font-size: 48px; line-height: 1.06; letter-spacing: -0.035em; font-weight: 500; color: var(--band-t)">Code intelligence, reimagined</h2>
+<p class="gm-lead" style="margin: 0; font-size: 17px; line-height: 1.6; color: var(--band-m)">Stop grepping through folders. Ask a question, read the answer, and jump straight to the lines that back it up.</p>
+</div>
+
+<div style="width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px">
+
+<div class="gm-card" style="border-radius: 26px; border: 1px solid var(--fc-line); background: radial-gradient(400px 260px at 20% 0%, var(--g1), transparent 70%), var(--fc-bg); color: var(--fc-t); padding: 30px; display: flex; flex-direction: column; gap: 18px; min-height: 340px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--fc-f)">acme/payments-api</div>
+<div style="align-self: flex-end; max-width: 82%; padding: 12px 16px; border-radius: 16px 16px 4px 16px; background: var(--fc-bub); font-size: 15px">how does auth work?</div>
+<div style="max-width: 94%; font-size: 15px; line-height: 1.65; color: var(--fc-t)">Requests pass through a session filter that reads the cookie, loads the user, and rejects anything else with a 401<span style="display: inline-block; width: 8px; height: 16px; margin-left: 3px; vertical-align: -2px; background: var(--accent); animation: gm-blink 1s steps(1) infinite"></span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto">
+<span style="padding: 6px 10px; border-radius: 8px; border: 1px solid var(--chip-bd); background: var(--chip-bg); font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--chip-fg); animation: gm-chip 6s ease-in-out .5s infinite both">config/SecurityConfig.java:12-48</span>
+<span style="padding: 6px 10px; border-radius: 8px; border: 1px solid var(--chip-bd); background: var(--chip-bg); font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--chip-fg); animation: gm-chip 6s ease-in-out 1.2s infinite both">auth/SessionFilter.java</span>
+</div>
+</div>
+
+<div class="gm-card" style="border-radius: 26px; border: 1px solid var(--fc-line); background: radial-gradient(420px 260px at 90% 0%, var(--g2), transparent 70%), var(--fc-bg); color: var(--fc-t); padding: 30px; display: flex; flex-direction: column; gap: 18px; min-height: 340px">
+<div style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--fc-f)">Live indexing</span><span style="padding: 4px 10px; border-radius: 999px; font-size: 12px; background: rgba(139,124,246,0.12); color: var(--violet-t); border: 1px solid rgba(139,124,246,0.4)">INDEXING</span></div>
+<div style="font-size: 36px; letter-spacing: -0.03em; font-weight: 500">Files, then chunks</div>
+<div style="height: 10px; border-radius: 99px; background: var(--fc-track); overflow: hidden"><div style="height: 100%; border-radius: 99px; background: linear-gradient(90deg, #8b7cf6, #f5a65b); animation: gm-fill 6s ease-in-out infinite"></div></div>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--fc-m)">Follow progress as it happens. If a run finishes with gaps, you see a warning and can re-index to fill them.</p>
+<div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap"><span style="padding: 6px 12px; border-radius: 999px; border: 1px solid var(--fc-line); font-size: 12px; color: var(--fc-m)">Pending</span><span style="padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(139,124,246,0.5); font-size: 12px; color: var(--violet-t)">Indexing</span><span style="padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(74,160,100,0.5); font-size: 12px; color: var(--ok)">Ready</span></div>
+</div>
+
+<div class="gm-card" style="border-radius: 26px; border: 1px solid var(--fc-line); background: radial-gradient(420px 260px at 10% 100%, var(--g3), transparent 70%), var(--fc-bg); color: var(--fc-t); padding: 30px; display: flex; flex-direction: column; gap: 16px; min-height: 280px">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--fc-f)">Citations</span>
+<h3 style="margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 500">Every answer shows its sources</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--fc-m)">Up to 8 relevant snippets are attached to each reply, with the file path and line range when available.</p>
+</div>
+
+<div class="gm-card" style="border-radius: 26px; border: 1px solid var(--fc-line); background: radial-gradient(420px 260px at 90% 100%, var(--g1), transparent 70%), var(--fc-bg); color: var(--fc-t); padding: 30px; display: flex; flex-direction: column; gap: 16px; min-height: 280px">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--fc-f)">Conversations</span>
+<h3 style="margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 500">Chats stay with the repository</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--fc-m)">Start as many chats as you like per repository and pick up an earlier one from the sidebar whenever you return.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="start" style="background: radial-gradient(700px 360px at 50% 100%, var(--glow1), transparent 70%), var(--bg); display: flex; flex-direction: column; align-items: center">
+<div class="gm-px gm-tight" style="width: 100%; max-width: 1240px; box-sizing: border-box; padding: 104px 32px 40px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+<h2 class="gm-h2b" style="margin: 0; font-size: 52px; line-height: 1.05; letter-spacing: -0.035em; font-weight: 500; max-width: 700px; color: var(--strong)">Start with one repository.</h2>
+<p class="gm-lead" style="margin: 0; font-size: 17px; color: var(--muted); max-width: 460px; line-height: 1.6">Sign in, pick a repo, and ask your first question in a few minutes.</p>
+<a href="Login.dc.html" style="display: flex; align-items: center; gap: 10px; height: 54px; padding: 0 30px; border-radius: 999px; background: var(--cta-bg); color: var(--cta-fg); font-size: 15px; font-weight: 600">Continue with GitHub <span aria-hidden="true">→</span></a>
+<div style="width: 100%; margin-top: 56px; border-top: 1px solid var(--line); padding-top: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--faint)"><span>githMind</span><span>Chat with your GitHub repositories</span></div>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1280,"height":2900}}'>
+class Component extends DCLogic {
+renderVals() { return { theme: this.props.theme === 'light' ? 'light' : 'dark' }; }
+}
+</script>
+</body>
+</html>

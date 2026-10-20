@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>githMind Sign in</title>
+<script src="5fe4a99c-4926-4131-84c2-3598d90aba4b"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!--[style stripped]-->
+<!--[style stripped]-->
+</helmet>
+<div data-gm="{{theme}}" style="min-height: 800px; box-sizing: border-box; background: radial-gradient(800px 500px at 75% 40%, var(--glow1), transparent 70%), radial-gradient(600px 400px at 12% 85%, var(--glow2), transparent 70%), var(--bg); color: var(--text); font-family: 'Geist', system-ui, sans-serif; display: flex; flex-wrap: wrap; align-items: stretch">
+
+<div class="gm-lpad" style="flex: 1 1 480px; box-sizing: border-box; padding: 40px 56px; display: flex; flex-direction: column; justify-content: space-between; gap: 40px; min-width: 0">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; color: var(--strong)">
+<!--[svg 418b]-->
+githMind
+</a>
+
+<div class="gm-rise" style="max-width: 400px; width: 100%; display: flex; flex-direction: column; gap: 22px">
+
+<div class="gm-mobile-only" style="justify-content: flex-start" aria-hidden="true">
+<!--[svg 1084b]-->
+</div>
+
+<h1 class="gm-h1" style="margin: 0; font-size: 44px; line-height: 1.05; letter-spacing: -0.03em; font-weight: 500; color: var(--strong)">Welcome back</h1>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: var(--muted)">Sign in with GitHub to index your repositories and start asking questions.</p>
+
+<sc-if value="{{showOauth}}" hint-placeholder-val="{{ false }}">
+<div role="alert" style="display: flex; gap: 12px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--err-bd); background: var(--err-bg); font-size: 14px; line-height: 1.5; color: var(--err-t)">
+<!--[svg 292b]-->
+<span>GitHub did not authorize the sign-in. Try again and accept the requested access.</span>
+</div>
+</sc-if>
+<sc-if value="{{showSession}}" hint-placeholder-val="{{ false }}">
+<div role="alert" style="display: flex; gap: 12px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--warn-bd); background: var(--warn-bg); font-size: 14px; line-height: 1.5; color: var(--warn-t)">
+<!--[svg 292b]-->
+<span>You signed in, but we could not start your session. Please sign in again.</span>
+</div>
+</sc-if>
+
+<button type="button" sc-camel-on-click="{{startRedirect}}" aria-busy="{{busy}}" style="display: flex; align-items: center; justify-content: center; gap: 12px; height: 56px; width: 100%; border: 0; border-radius: 999px; background: var(--cta-bg); color: var(--cta-fg); font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; opacity: {{btnOpacity}}">
+<sc-if value="{{showIdle}}" hint-placeholder-val="{{ true }}">
+<!--[svg 668b]-->
+<span>Continue with GitHub</span>
+</sc-if>
+<sc-if value="{{showBusy}}" hint-placeholder-val="{{ false }}">
+<!--[svg 244b]-->
+<span>Redirecting to GitHub...</span>
+</sc-if>
+</button>
+
+<p style="margin: 0; font-size: 13px; line-height: 1.6; color: var(--faint)">You will be sent to github.com and back. githMind requests the read:user and repo scopes, which it needs to list and read your repositories, including private ones.</p>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 12px; color: var(--faint)">
+<span style="font-family: 'Geist Mono', monospace">Preview state</span>
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="4">
+<button type="button" sc-camel-on-click="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button>
+</sc-for>
+</div>
+</div>
+
+<div class="gm-art-col" style="flex: 1 1 420px; display: flex; align-items: center; justify-content: center; padding: 40px; min-width: 0; position: relative">
+<div style="position: relative; width: 100%; max-width: 460px; aspect-ratio: 1 / 1">
+<div style="position: absolute; inset: 12%; border-radius: 50%; background: radial-gradient(circle, var(--halo), transparent 68%); animation: gm-breathe 6s ease-in-out infinite"></div>
+<!--[svg 3100b]-->
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;dark&quot;,&quot;light&quot;],&quot;default&quot;:&quot;dark&quot;},&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:800}}">
+class Component extends DCLogic {
+state = { s: 'none' };
+renderVals() {
+const s = this.state.s;
+const defs = [['none', 'Default'], ['oauth_failed', 'oauth_failed'], ['session', 'session'], ['redirecting', 'Redirecting']];
+return {
+theme: this.props.theme === 'light' ? 'light' : 'dark',
+showOauth: s === 'oauth_failed',
+showSession: s === 'session',
+showIdle: s !== 'redirecting',
+showBusy: s === 'redirecting',
+busy: s === 'redirecting' ? 'true' : 'false',
+btnOpacity: s === 'redirecting' ? '0.8' : '1',
+startRedirect: () => this.setState({ s: 'redirecting' }),
+tabs: defs.map(([id, label]) => ({
+label,
+pick: () => this.setState({ s: id }),
+style: 'height: 32px; padding: 0 12px; border-radius: 999px; cursor: pointer; font-family: Geist Mono, monospace; font-size: 12px; color: ' + (s === id ? 'var(--tab-on-fg)' : 'var(--muted)') + '; background: ' + (s === id ? 'var(--tab-on-bg)' : 'transparent') + '; border: 1px solid var(--line2)'
+}))
+};
+}
+}
+</script>
+
+</body></html>

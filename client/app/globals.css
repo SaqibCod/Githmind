@@ -277,6 +277,7 @@
 
   --tracking-gm-hero: -0.035em;
   --tracking-gm-tight: -0.03em;
+  --tracking-gm-title: -0.025em;
   --tracking-gm-snug: -0.02em;
   --tracking-gm-slight: -0.01em;
   --tracking-gm-eyebrow: 0.08em;
@@ -312,11 +313,13 @@
      in blur and travel and cannot share one name. */
   --animate-gm-rise: gm-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   --animate-gm-rise-md: gm-rise-md 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-gm-rise-sm: gm-rise-sm 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   --animate-gm-scene: gm-scene 18s ease-in-out infinite both;
   --animate-gm-cap: gm-cap 18s ease-in-out infinite both;
   --animate-gm-spin-slow: gm-spin 70s linear infinite;
   --animate-gm-spin-orbit: gm-spin 14s linear infinite;
   --animate-gm-spin-ring: gm-spin 12s linear infinite;
+  --animate-gm-spin-med: gm-spin 1.3s linear infinite;
   --animate-gm-spin-fast: gm-spin 0.9s linear infinite;
   --animate-gm-bob: gm-bob 7s ease-in-out infinite alternate;
   --animate-gm-plate: gm-plate 3s ease-in-out infinite alternate;
@@ -324,6 +327,9 @@
   --animate-gm-lab: gm-lab 10s ease-in-out infinite;
   --animate-gm-node: gm-node 10s ease-in-out infinite;
   --animate-gm-breathe: gm-breathe 6s ease-in-out infinite;
+  /* the callback emblem pulses harder and faster than the hero halos */
+  --animate-gm-breathe-lg: gm-breathe-lg 4s ease-in-out infinite;
+  --animate-gm-dots: gm-dots 1.4s ease-in-out infinite;
   --animate-gm-glow: gm-glow 3.6s ease-in-out infinite;
   --animate-gm-marquee: gm-marquee 28s linear infinite;
   --animate-gm-blink: gm-blink 1s steps(1) infinite;
@@ -338,6 +344,10 @@
   }
   @keyframes gm-rise-md {
     from { opacity: 0; filter: blur(10px); transform: translateY(16px); }
+    to { opacity: 1; filter: blur(0); transform: translateY(0); }
+  }
+  @keyframes gm-rise-sm {
+    from { opacity: 0; filter: blur(10px); transform: translateY(14px); }
     to { opacity: 1; filter: blur(0); transform: translateY(0); }
   }
   @keyframes gm-scene {
@@ -384,6 +394,15 @@
   @keyframes gm-breathe {
     0%, 100% { opacity: 0.55; transform: scale(1); }
     50% { opacity: 1; transform: scale(1.06); }
+  }
+  @keyframes gm-breathe-lg {
+    0%, 100% { opacity: 0.55; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.08); }
+  }
+  @keyframes gm-dots {
+    0%, 20% { opacity: 0.2; }
+    40% { opacity: 1; }
+    100% { opacity: 0.2; }
   }
   @keyframes gm-glow {
     0%, 100% {
@@ -598,6 +617,11 @@
     radial-gradient(700px 480px at 8% 40%, var(--gm-glow2), transparent 70%),
     var(--gm-bg);
 }
+@utility gm-callback-glow {
+  background:
+    radial-gradient(600px 420px at 50% 42%, var(--gm-glow1), transparent 70%),
+    var(--gm-bg);
+}
 @utility gm-login-glow {
   background:
     radial-gradient(800px 500px at 75% 40%, var(--gm-glow1), transparent 70%),
@@ -668,6 +692,18 @@
 }
 @utility gm-view-box {
   transform-box: view-box;
+}
+
+/* The design retunes --glow1/--halo slightly per page. The shared tokens
+   carry the landing's values; this restores the callback screen's own, which
+   run a touch hotter so the emblem reads against a nearly empty page. */
+.gm-callback-tone {
+  --gm-glow1: rgba(245, 166, 91, 0.26);
+  --gm-halo: rgba(245, 166, 91, 0.36);
+}
+.dark .gm-callback-tone {
+  --gm-glow1: rgba(245, 166, 91, 0.15);
+  --gm-halo: rgba(245, 166, 91, 0.26);
 }
 
 /* Keyboard focus ring. Every design page except the landing defines this;

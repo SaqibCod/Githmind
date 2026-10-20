@@ -1,30 +1,14 @@
-"use client";
+import { CallbackView } from "@/components/auth/callback-view";
 
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-
-import { useCurrentUser } from "@/hooks/use-auth";
-import { Spinner } from "@/components/ui/spinner";
-
+/**
+ * OAuth return path, ported from docs/design/githMind UI Design.html →
+ * "githMind Callback".
+ *
+ * The backend has already set the session cookie by the time GitHub lands
+ * here — the URL carries no token or user data. The page's only job is to
+ * call /api/auth/me and route onward, so all of its behaviour lives in the
+ * client component.
+ */
 export default function AuthCallbackPage() {
-  const router = useRouter();
-  const { data: user, isLoading, isError, isFetched } = useCurrentUser();
-  
-  useEffect(() => {
-    if (!isFetched || isLoading) return;
-
-    if (user) {
-      router.replace("/dashboard");
-      return;
-    }
-
-    router.replace("/login?error=session");
-  }, [user, isLoading, isFetched, isError, router]);
-
-  return (
-    <div className="flex min-h-svh flex-col items-center justify-center gap-3">
-      <Spinner className="size-6" />
-      <p className="text-sm text-muted-foreground">Finishing GitHub sign-in…</p>
-    </div>
-  );
+  return <CallbackView />;
 }

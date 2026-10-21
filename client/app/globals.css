@@ -153,6 +153,10 @@
   --color-gm-violet: #8b7cf6;
   --color-gm-orange: #f5a65b;
   --color-gm-teal: #2dd4bf;
+  --color-gm-green: #4ade80;
+  /* text on the violet-to-amber avatar gradient, which stays light in both
+     themes, so this does not follow --gm-cta-fg */
+  --color-gm-avatar-fg: #0a0a0e;
   /* mid-tone green, used only for the status pills inside the landing feature
      band — that band inverts against the page, so it needs a green that holds
      up on both the light and the dark band rather than --gm-ok */
@@ -314,6 +318,10 @@
   --animate-gm-rise: gm-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   --animate-gm-rise-md: gm-rise-md 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   --animate-gm-rise-sm: gm-rise-sm 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  /* the signed-in app pages drop the blur and just slide up */
+  --animate-gm-rise-xs: gm-rise-xs 0.5s ease both;
+  --animate-gm-pulse: gm-pulse 1.6s ease-in-out infinite;
+  --animate-gm-shimmer: gm-shimmer 1.6s ease-in-out infinite;
   --animate-gm-scene: gm-scene 18s ease-in-out infinite both;
   --animate-gm-cap: gm-cap 18s ease-in-out infinite both;
   --animate-gm-spin-slow: gm-spin 70s linear infinite;
@@ -349,6 +357,18 @@
   @keyframes gm-rise-sm {
     from { opacity: 0; filter: blur(10px); transform: translateY(14px); }
     to { opacity: 1; filter: blur(0); transform: translateY(0); }
+  }
+  @keyframes gm-rise-xs {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes gm-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  @keyframes gm-shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(250%); }
   }
   @keyframes gm-scene {
     0% { opacity: 0; filter: blur(18px); transform: scale(0.9); }
@@ -673,6 +693,15 @@
 @utility gm-halo {
   background: radial-gradient(circle, var(--gm-halo), transparent 68%);
 }
+@utility gm-shimmer-bar {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gm-violet),
+    var(--color-gm-orange),
+    transparent
+  );
+}
 @utility gm-progress-fill {
   background: linear-gradient(90deg, var(--color-gm-violet), var(--color-gm-orange));
 }
@@ -704,6 +733,19 @@
 .dark .gm-callback-tone {
   --gm-glow1: rgba(245, 166, 91, 0.15);
   --gm-halo: rgba(245, 166, 91, 0.26);
+}
+
+/* The signed-in app pages (repositories, repo overview, settings) share a
+   cooler glow and a slightly stronger hairline than the marketing pages, and
+   tighten the focus ring to a 2px offset. */
+.gm-app-tone {
+  --gm-glow1: rgba(245, 166, 91, 0.16);
+  --gm-line2: rgba(10, 10, 20, 0.2);
+  --gm-focus-offset: 2px;
+}
+.dark .gm-app-tone {
+  --gm-glow1: rgba(245, 166, 91, 0.09);
+  --gm-line2: rgba(255, 255, 255, 0.16);
 }
 
 /* Keyboard focus ring. Every design page except the landing defines this;

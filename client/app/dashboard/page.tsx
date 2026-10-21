@@ -1,16 +1,17 @@
-"use client";
-
+import { RepoListView } from "@/components/dashboard/repo-list-view";
+import { DashboardShell } from "@/components/layout/dashboard-shell";
 import { RequireAuth } from "@/components/providers/require-auth";
-import { AppShell } from "@/components/layout/app-shell";
-import { RepoDashboard } from "@/components/dashboard/repo-dashboard";
 
+/**
+ * Repositories, ported from docs/design/githMind UI Design.html → "githMind
+ * Dashboard".
+ */
 export default function DashboardPage() {
   return (
     <RequireAuth>
-      <AppShell hideHeader>
-        <RepoDashboard/>
-      </AppShell>
+      <DashboardShell>
+        <RepoListView />
+      </DashboardShell>
     </RequireAuth>
   );
 }
-    
